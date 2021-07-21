@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.ceiba.usuario.comando.ComandoUsuario;
 
+
 @Component
 public class FabricaUsuario {
 

@@ -26,4 +26,5 @@ public class ServicioCrearUsuario {
             throw new ExcepcionDuplicidad(EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA);
         }
     }
+
 }

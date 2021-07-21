@@ -14,6 +14,7 @@ public class ComandoUsuarioTestDataBuilder {
 
     public ComandoUsuarioTestDataBuilder() {
         nombre = UUID.randomUUID().toString();
+        System.out.println(nombre);
         clave = "1234";
         fecha = LocalDateTime.now();
     }

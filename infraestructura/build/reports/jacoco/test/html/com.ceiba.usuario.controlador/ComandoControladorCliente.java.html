@@ -28,5 +28,11 @@ public class ComandoControladorCliente {
     public ComandoRespuesta&lt;Long&gt; crear(@RequestBody ComandoCliente comandoCliente) {
 <span class="nc" id="L29">        return manejadorIngresarCliente.ejecutar(comandoCliente);</span>
     }
+
+    @DeleteMapping(value=&quot;/{id}&quot;)
+    @ApiOperation(&quot;Eliminar Cliente&quot;)
+    public void eliminar(@PathVariable Long id) {
+<span class="nc" id="L35">        manejadorEliminarCliente.ejecutar(id);</span>
+<span class="nc" id="L36">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

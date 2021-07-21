@@ -22,6 +22,6 @@ public class DaoClienteMysql implements DaoCliente {
 
     @Override
     public List<DtoCliente> listar() {
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoUsuario());
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoCliente());
     }
 }

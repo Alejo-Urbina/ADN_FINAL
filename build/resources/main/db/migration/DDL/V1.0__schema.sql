@@ -11,6 +11,7 @@ create table cliente (
  nombre varchar(100) not null,
  cedula varchar(20) not null,
  genero varchar(20) not null,
+ precio_entrada float(2) not null,
  fecha_nacimiento datetime null,
  primary key (id)
 );

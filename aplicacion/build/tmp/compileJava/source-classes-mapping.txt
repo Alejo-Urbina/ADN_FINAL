@@ -10,13 +10,13 @@ com/ceiba/usuario/comando/fabrica/FabricaUsuario.java
  com.ceiba.usuario.comando.fabrica.FabricaUsuario
 com/ceiba/usuario/consulta/ManejadorListarClientes.java
  com.ceiba.usuario.consulta.ManejadorListarClientes
-com/ceiba/usuario/comando/ComandoCliente.java
- com.ceiba.usuario.comando.ComandoCliente
 com/ceiba/usuario/comando/manejador/ManejadorActualizarUsuario.java
  com.ceiba.usuario.comando.manejador.ManejadorActualizarUsuario
-com/ceiba/usuario/comando/fabrica/FabricaCliente.java
- com.ceiba.usuario.comando.fabrica.FabricaCliente
 com/ceiba/usuario/comando/manejador/ManejadorEliminarCliente.java
  com.ceiba.usuario.comando.manejador.ManejadorEliminarCliente
+com/ceiba/usuario/comando/fabrica/FabricaCliente.java
+ com.ceiba.usuario.comando.fabrica.FabricaCliente
+com/ceiba/usuario/comando/ComandoCliente.java
+ com.ceiba.usuario.comando.ComandoCliente
 com/ceiba/usuario/comando/manejador/ManejadorIngresarCliente.java
  com.ceiba.usuario.comando.manejador.ManejadorIngresarCliente

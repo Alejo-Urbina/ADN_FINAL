@@ -1,1 +1,1 @@
-insert into cliente(nombre,cedula,genero,fecha_nacimiento) values('test','1234','M',now())
+insert into cliente(nombre,cedula,genero, precio_entrada,fecha_nacimiento) values('test','1234','M', 0,now())

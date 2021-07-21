@@ -12,6 +12,6 @@ public class DtoCliente {
     private String nombre;
     private String cedula;
     private String genero;
-    private String precioEntrada;
+    private Double precioEntrada;
     private LocalDateTime fechaNacimiento;
 }

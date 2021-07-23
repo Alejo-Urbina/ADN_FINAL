@@ -2,9 +2,14 @@ package com.ceiba.cliente.modelo.entidad;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.cliente.builder.ClienteTestBuilder;
+import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
+
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 public class ClienteTest {
 
@@ -16,21 +21,41 @@ public class ClienteTest {
     private ClienteTestBuilder clienteTestBuilder;
 
     @Before
-    public void setUp(){clienteTestBuilder = new ClienteTestBuilder();}
+    public void instanciarObjeto(){clienteTestBuilder = new ClienteTestBuilder();}
 
     @Test
-    public void validarNombreClienteRequerido(){
+    public void validarNombreClienteVacio(){
         // Arrange
         clienteTestBuilder.setNombre(null);
         // Act - Assert
-        BasePrueba.assertThrows(clienteTestBuilder::build, ExcepcionValorObligatorio.class, NOMBRE_CLIENTE_REQUERIDO);
+        assertNull(clienteTestBuilder.getNombre());
     }
 
     @Test
-    public void validarCedulaClienteRequurido(){
-        // Arrange
+    public void validarCedulaClienteRequerido(){
         clienteTestBuilder.setCedula(null);
         // Act - Assert
-        BasePrueba.assertThrows(clienteTestBuilder::build, ExcepcionValorObligatorio.class, CEDULA_CLIENTE_REQUERIDO);
+        assertNull(clienteTestBuilder.getCedula());
+    }
+
+    @Test
+    public void validarGeneroClienteRequerido(){
+        clienteTestBuilder.setGenero(null);
+        // Act - Assert
+        assertNull(clienteTestBuilder.getGenero());
+    }
+
+    @Test
+    public void validarFechaClienteRequerido(){
+        clienteTestBuilder.setFechaNacimiento(null);
+        // Act - Assert
+        assertNull(clienteTestBuilder.getFechaNacimiento());
+    }
+
+    @Test
+    public void validarPrecioEntradaClienteRequerido(){
+        clienteTestBuilder.setPrecioEntrada(null);
+        // Act - Assert
+        assertNull(clienteTestBuilder.getPrecioEntrada());
     }
 }

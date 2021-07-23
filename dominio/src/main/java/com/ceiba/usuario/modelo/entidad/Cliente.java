@@ -3,7 +3,7 @@ package com.ceiba.usuario.modelo.entidad;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -20,9 +20,9 @@ public class Cliente {
     private String cedula;
     private String genero;
     private Double precioEntrada;
-    private LocalDateTime fechaNacimiento;
+    private LocalDate fechaNacimiento;
 
-    public Cliente(Long id,String nombre, String cedula, String genero, Double precioEntrada, LocalDateTime fechaNacimiento) {
+    public Cliente(Long id,String nombre, String cedula, String genero, Double precioEntrada, LocalDate fechaNacimiento) {
         validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);
         validarObligatorio(cedula, SE_DEBE_INGRESAR_LA_CEDULA);
         validarObligatorio(genero, SE_DEBE_INGRESAR_EL_GENERO);

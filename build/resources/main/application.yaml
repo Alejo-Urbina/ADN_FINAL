@@ -4,7 +4,7 @@ jasypt:
       algorithm: PBEWithMD5AndDES
 
 server:
-   port: 8080
+   port: 8082
    servlet:
       context-path: /discoteca
       session:

@@ -4,27 +4,38 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
 import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import com.ceiba.usuario.servicio.ServicioEliminarUsuario;
+import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
+import com.ceiba.usuario.servicio.ServicioEliminarCliente;
+import com.ceiba.usuario.servicio.ServicioIngresarCliente;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-<span class="nc" id="L11">public class BeanServicio {</span>
+<span class="fc" id="L14">public class BeanServicio {</span>
 
     @Bean
     public ServicioCrearUsuario servicioCrearUsuario(RepositorioUsuario repositorioUsuario) {
-<span class="nc" id="L15">        return new ServicioCrearUsuario(repositorioUsuario);</span>
+<span class="nc" id="L18">        return new ServicioCrearUsuario(repositorioUsuario);</span>
     }
 
     @Bean
     public ServicioEliminarUsuario servicioEliminarUsuario(RepositorioUsuario repositorioUsuario) {
-<span class="nc" id="L20">        return new ServicioEliminarUsuario(repositorioUsuario);</span>
+<span class="nc" id="L23">        return new ServicioEliminarUsuario(repositorioUsuario);</span>
     }
 
     @Bean
     public ServicioActualizarUsuario servicioActualizarUsuario(RepositorioUsuario repositorioUsuario) {
-<span class="nc" id="L25">        return new ServicioActualizarUsuario(repositorioUsuario);</span>
+<span class="nc" id="L28">        return new ServicioActualizarUsuario(repositorioUsuario);</span>
     }
-	
 
+    @Bean
+    public ServicioIngresarCliente servicioCrearCliente(RepositorioCliente repositorioCliente) {
+<span class="nc" id="L33">        return new ServicioIngresarCliente(repositorioCliente);</span>
+    }
+
+    @Bean
+    public ServicioEliminarCliente servicioEliminarUsuario(RepositorioCliente repositorioCliente) {
+<span class="nc" id="L38">        return new ServicioEliminarCliente(repositorioCliente);</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

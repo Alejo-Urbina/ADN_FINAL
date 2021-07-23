@@ -1,8 +1,14 @@
-com/ceiba/ApplicationMock.java
- com.ceiba.ApplicationMock
-com/ceiba/usuario/controlador/ConsultaControladorUsuarioTest.java
- com.ceiba.usuario.controlador.ConsultaControladorUsuarioTest
+com/ceiba/usuario/builder/ComandoUsuarioTestDataBuilder.java
+ com.ceiba.usuario.builder.ComandoUsuarioTestDataBuilder
 com/ceiba/usuario/controlador/ComandoControladorUsuarioTest.java
  com.ceiba.usuario.controlador.ComandoControladorUsuarioTest
-com/ceiba/usuario/servicio/testdatabuilder/ComandoUsuarioTestDataBuilder.java
- com.ceiba.usuario.servicio.testdatabuilder.ComandoUsuarioTestDataBuilder
+com/ceiba/usuario/controlador/ComandoControladorClienteTest.java
+ com.ceiba.usuario.controlador.ComandoControladorClienteTest
+com/ceiba/usuario/builder/ComandoClienteTestDataBuilder.java
+ com.ceiba.usuario.builder.ComandoClienteTestDataBuilder
+com/ceiba/usuario/controlador/ConsultaControladorUsuarioTest.java
+ com.ceiba.usuario.controlador.ConsultaControladorUsuarioTest
+com/ceiba/usuario/controlador/ConsultaControladorClienteTest.java
+ com.ceiba.usuario.controlador.ConsultaControladorClienteTest
+com/ceiba/ApplicationMock.java
+ com.ceiba.ApplicationMock

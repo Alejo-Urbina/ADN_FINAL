@@ -55,7 +55,7 @@ public class ServicioIngresarCliente {
     }
 
     private Double calcularPrecioEntrada(Cliente cliente) {
-        CalcularPrecioEntrada calcularPrecioEntrada = null;
-        return calcularPrecioEntrada.calcularEntrada(cliente);
+        CalcularPrecioEntrada calcularPrecioE = null;
+        return calcularPrecioE.calcularEntrada(cliente);
     }
 }

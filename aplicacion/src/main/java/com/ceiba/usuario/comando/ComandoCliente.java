@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -17,5 +17,5 @@ public class ComandoCliente {
     private String cedula;
     private String genero;
     private Double precioEntrada;
-    private LocalDateTime fechaNacimiento;
+    private LocalDate fechaNacimiento;
 }

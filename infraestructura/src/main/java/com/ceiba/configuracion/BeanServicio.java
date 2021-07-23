@@ -4,6 +4,9 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
 import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import com.ceiba.usuario.servicio.ServicioEliminarUsuario;
+import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
+import com.ceiba.usuario.servicio.ServicioEliminarCliente;
+import com.ceiba.usuario.servicio.ServicioIngresarCliente;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,6 +27,14 @@ public class BeanServicio {
     public ServicioActualizarUsuario servicioActualizarUsuario(RepositorioUsuario repositorioUsuario) {
         return new ServicioActualizarUsuario(repositorioUsuario);
     }
-	
 
+    @Bean
+    public ServicioIngresarCliente servicioCrearCliente(RepositorioCliente repositorioCliente) {
+        return new ServicioIngresarCliente(repositorioCliente);
+    }
+
+    @Bean
+    public ServicioEliminarCliente servicioEliminarCliente(RepositorioCliente repositorioCliente) {
+        return new ServicioEliminarCliente(repositorioCliente);
+    }
 }

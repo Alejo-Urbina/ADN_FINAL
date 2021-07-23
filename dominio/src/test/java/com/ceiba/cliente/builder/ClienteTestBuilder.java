@@ -2,7 +2,7 @@ package com.ceiba.cliente.builder;
 
 import com.ceiba.usuario.modelo.entidad.Cliente;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class ClienteTestBuilder {
     private Long id;
@@ -10,7 +10,7 @@ public class ClienteTestBuilder {
     private String cedula;
     private String genero;
     private Double precioEntrada;
-    private LocalDateTime fechaNacimiento;
+    private LocalDate fechaNacimiento;
 
     public ClienteTestBuilder() {
         this.id = 1L;
@@ -18,31 +18,61 @@ public class ClienteTestBuilder {
         this.cedula = "1090515821";
         this.genero = "M";
         this.precioEntrada = 0d;
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaNacimiento = LocalDate.now();
     }
 
-    public void setId(Long id) {
+    public Long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public Double getPrecioEntrada() {
+        return precioEntrada;
+    }
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public ClienteTestBuilder setId(Long id) {
         this.id = id;
+        return this;
     }
 
-    public void setNombre(String nombre) {
+    public ClienteTestBuilder setNombre(String nombre) {
         this.nombre = nombre;
+        return this;
     }
 
-    public void setCedula(String cedula) {
+    public ClienteTestBuilder setCedula(String cedula) {
         this.cedula = cedula;
+        return this;
     }
 
-    public void setGenero(String genero) {
+    public ClienteTestBuilder setGenero(String genero) {
         this.genero = genero;
+        return this;
     }
 
-    public void setPrecioEntrada(Double precioEntrada) {
+    public ClienteTestBuilder setPrecioEntrada(Double precioEntrada) {
         this.precioEntrada = precioEntrada;
+        return this;
     }
 
-    public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+    public ClienteTestBuilder setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+        return this;
     }
 
     public Cliente build(){

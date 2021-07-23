@@ -2,34 +2,36 @@
 
 import com.ceiba.usuario.modelo.entidad.Cliente;
 
+import java.time.LocalDateTime;
+
 public class PrecioEntrada implements  CalcularPrecioEntrada{
 
-<span class="nc" id="L7">    private static final Double PRECIO_ENTRADA_HOMBRE = 15000d;</span>
-<span class="nc" id="L8">    private static final Double PRECIO_ENTRADA_MUJER = 10000d;</span>
+<span class="nc" id="L9">    private static final Double PRECIO_ENTRADA_HOMBRE = 15000d;</span>
+<span class="nc" id="L10">    private static final Double PRECIO_ENTRADA_MUJER = 10000d;</span>
     private static final String HOMBRE = &quot;H&quot;;
     private static final String MUJER = &quot;M&quot;;
     private static final String SABADO = &quot;SATURDAY&quot;;
     private static final String DOMINGO = &quot;SUNDAY&quot;;
-<span class="nc" id="L13">    private static final Double TASA_AUMENTO_SADADO_O_DOMINGO = 0.05d;</span>
+<span class="nc" id="L15">    private static final Double TASA_AUMENTO_SADADO_O_DOMINGO = 0.05d;</span>
 
-<span class="nc" id="L15">    private PrecioEntrada() {</span>
-<span class="nc" id="L16">        throw new IllegalStateException(&quot;Fabrica de estrategias de CalcularInteresCredito&quot;);</span>
+<span class="nc" id="L17">    private PrecioEntrada() {</span>
+<span class="nc" id="L18">        throw new IllegalStateException(&quot;Fabrica de estrategias de CalcularInteresCredito&quot;);</span>
     }
 
     @Override
     public Double calcularEntrada(Cliente cliente) {
-<span class="nc bnc" id="L21" title="All 2 branches missed.">        if(cliente.getGenero() == HOMBRE){</span>
-<span class="nc" id="L22">            cliente.setPrecioEntrada(PRECIO_ENTRADA_HOMBRE);</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        if(cliente.getGenero() == HOMBRE){</span>
+<span class="nc" id="L24">            cliente.setPrecioEntrada(PRECIO_ENTRADA_HOMBRE);</span>
         } else {
-<span class="nc bnc" id="L24" title="All 2 branches missed.">            if (cliente.getGenero() == MUJER){</span>
-<span class="nc" id="L25">                cliente.setPrecioEntrada(PRECIO_ENTRADA_MUJER);</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">            if (cliente.getGenero() == MUJER){</span>
+<span class="nc" id="L27">                cliente.setPrecioEntrada(PRECIO_ENTRADA_MUJER);</span>
             }
         }
-<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (String.valueOf(cliente.getFechaNacimiento().getDayOfWeek()) == SABADO ||</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">                String.valueOf(cliente.getFechaNacimiento().getDayOfWeek()) == DOMINGO) {</span>
-<span class="nc" id="L30">            cliente.setPrecioEntrada(cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO);</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        if (String.valueOf(LocalDateTime.now().getDayOfWeek()) == SABADO ||</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">                String.valueOf(LocalDateTime.now().getDayOfWeek()) == DOMINGO) {</span>
+<span class="nc" id="L32">            cliente.setPrecioEntrada(cliente.getPrecioEntrada() + (cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO));</span>
         }
-<span class="nc" id="L32">        return cliente.getPrecioEntrada();</span>
+<span class="nc" id="L34">        return cliente.getPrecioEntrada();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

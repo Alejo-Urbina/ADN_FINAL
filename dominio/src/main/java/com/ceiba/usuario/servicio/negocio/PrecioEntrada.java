@@ -2,6 +2,8 @@ package com.ceiba.usuario.servicio.negocio;
 
 import com.ceiba.usuario.modelo.entidad.Cliente;
 
+import java.time.LocalDateTime;
+
 public class PrecioEntrada implements  CalcularPrecioEntrada{
 
     private static final Double PRECIO_ENTRADA_HOMBRE = 15000d;
@@ -25,9 +27,9 @@ public class PrecioEntrada implements  CalcularPrecioEntrada{
                 cliente.setPrecioEntrada(PRECIO_ENTRADA_MUJER);
             }
         }
-        if (String.valueOf(cliente.getFechaNacimiento().getDayOfWeek()) == SABADO ||
-                String.valueOf(cliente.getFechaNacimiento().getDayOfWeek()) == DOMINGO) {
-            cliente.setPrecioEntrada(cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO);
+        if (String.valueOf(LocalDateTime.now().getDayOfWeek()) == SABADO ||
+                String.valueOf(LocalDateTime.now().getDayOfWeek()) == DOMINGO) {
+            cliente.setPrecioEntrada(cliente.getPrecioEntrada() + (cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO));
         }
         return cliente.getPrecioEntrada();
     }

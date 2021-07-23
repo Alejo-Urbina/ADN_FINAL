@@ -11,6 +11,7 @@ import java.util.List;
 
 @Component
 public class DaoClienteMysql implements DaoCliente {
+
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace="cliente", value="listar")

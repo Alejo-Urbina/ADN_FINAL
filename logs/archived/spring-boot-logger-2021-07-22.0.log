@@ -1,0 +1,1249 @@
+2021-07-22 18:35:50,264 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 8016 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:35:50,268 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:35:50,306 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:35:50,306 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:35:50,880 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 18:35:50,887 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:35:50,899 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 18:36:27,711 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 2752 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:36:27,714 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:36:27,751 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:36:27,751 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:36:28,284 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 18:36:28,292 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:36:28,303 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 18:42:24,517 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 9388 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:42:24,520 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:42:24,557 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:42:24,557 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:42:25,367 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 18:42:25,411 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 18:42:25,413 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:42:25,413 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:42:25,413 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:42:25,413 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:42:25,414 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:42:25,414 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:42:25,414 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:42:25,426 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 18:42:25,500 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 18:42:25,501 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 18:42:25,770 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 18:42:25,777 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 18:42:25,778 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 18:42:25,778 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 18:42:25,828 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 18:42:25,829 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1271 ms
+2021-07-22 18:42:25,906 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 18:42:25,983 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 18:42:25,989 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 18:42:26,052 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 18:42:26,053 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 18:42:26,072 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 18:42:26,105 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.010s)
+2021-07-22 18:42:26,110 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 18:42:26,122 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 18:42:26,123 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 18:42:26,142 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.032s)
+2021-07-22 18:42:26,171 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 18:42:26,172 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 18:42:26,175 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 18:42:26,177 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 18:42:26,186 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:42:26,204 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 18:43:11,499 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 19484 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:43:11,502 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:43:11,551 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:43:11,552 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:43:12,679 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 18:43:12,750 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 18:43:12,752 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:43:12,752 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:43:12,752 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:43:12,753 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:43:12,753 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:43:12,753 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:43:12,753 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:43:12,778 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 18:43:12,910 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 18:43:12,911 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 18:43:13,265 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 18:43:13,275 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 18:43:13,276 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 18:43:13,276 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 18:43:13,353 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 18:43:13,353 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1801 ms
+2021-07-22 18:43:13,461 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 18:43:13,618 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 18:43:13,628 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 18:43:13,741 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 18:43:13,747 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 18:43:13,772 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 18:43:13,823 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.014s)
+2021-07-22 18:43:13,832 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 18:43:13,851 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 18:43:13,852 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 18:43:13,876 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.046s)
+2021-07-22 18:43:13,928 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 18:43:13,929 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 18:43:13,933 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 18:43:13,936 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 18:43:13,948 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:43:13,965 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 18:44:34,299 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 19540 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:44:34,315 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:44:34,350 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:44:34,350 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:44:35,144 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:44:35,186 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:44:35,201 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 18:44:35,276 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 18:44:35,277 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 18:44:35,513 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 18:44:35,513 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 18:44:35,513 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 18:44:35,513 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 18:44:35,566 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 18:44:35,566 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1216 ms
+2021-07-22 18:44:35,646 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 18:44:35,716 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 18:44:35,716 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 18:44:35,782 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 18:44:35,782 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 18:44:35,797 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 18:44:35,830 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.011s)
+2021-07-22 18:44:35,830 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 18:44:35,851 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 18:44:35,851 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 18:44:35,868 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.032s)
+2021-07-22 18:44:35,900 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 18:44:35,900 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 18:44:35,900 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 18:44:35,900 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 18:44:35,913 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:44:35,929 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 18:45:46,839 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 11040 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:45:46,839 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:45:46,879 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:45:46,879 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:45:47,670 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:45:47,708 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:45:47,723 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 18:45:47,787 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 18:45:47,787 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 18:45:48,039 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 18:45:48,039 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 18:45:48,039 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 18:45:48,039 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 18:45:48,086 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 18:45:48,086 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1207 ms
+2021-07-22 18:45:48,155 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 18:45:48,225 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 18:45:48,225 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 18:45:48,296 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 18:45:48,297 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 18:45:48,315 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 18:45:48,345 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.008s)
+2021-07-22 18:45:48,350 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 18:45:48,364 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 18:45:48,364 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 18:45:48,380 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.031s)
+2021-07-22 18:45:48,413 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 18:45:48,413 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 18:45:48,417 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 18:45:48,419 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 18:45:48,430 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:45:48,448 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 18:53:12,955 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 20116 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:53:12,955 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:53:12,995 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:53:12,996 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:53:13,784 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:53:13,815 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 18:53:13,831 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 18:53:13,900 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 18:53:13,900 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 18:53:14,167 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 18:53:14,183 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 18:53:14,183 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 18:53:14,183 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 18:53:14,230 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 18:53:14,230 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1234 ms
+2021-07-22 18:53:14,301 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 18:53:14,368 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 18:53:14,368 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 18:53:14,422 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 18:53:14,438 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 18:53:14,452 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 18:53:14,485 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.011s)
+2021-07-22 18:53:14,485 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 18:53:14,503 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 18:53:14,503 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 18:53:14,519 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.032s)
+2021-07-22 18:53:14,552 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 18:53:14,552 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 18:53:14,552 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 18:53:14,552 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 18:53:14,565 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:53:14,581 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 18:53:39,137 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 14416 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 18:53:39,137 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 18:53:39,173 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 18:53:39,173 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 18:53:39,689 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 18:53:39,705 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 18:53:39,705 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 20:21:48,513 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 19400 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 20:21:48,516 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 20:21:48,554 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 20:21:48,554 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 20:21:49,101 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 20:21:49,108 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 20:21:49,120 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 20:26:07,065 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 17308 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 20:26:07,068 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 20:26:07,105 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 20:26:07,105 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 20:26:07,927 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:07,959 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:07,975 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 20:26:08,043 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 20:26:08,043 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 20:26:08,299 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 20:26:08,305 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 20:26:08,306 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 20:26:08,306 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 20:26:08,350 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 20:26:08,350 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1244 ms
+2021-07-22 20:26:08,419 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 20:26:08,488 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 20:26:08,488 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 20:26:08,545 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 20:26:08,545 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 20:26:08,561 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 20:26:08,593 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.010s)
+2021-07-22 20:26:08,593 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 20:26:08,613 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 20:26:08,613 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 20:26:08,629 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.031s)
+2021-07-22 20:26:08,661 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 20:26:08,661 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 20:26:08,661 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 20:26:08,661 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 20:26:08,675 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 20:26:08,691 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 20:26:44,850 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 6636 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 20:26:44,866 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 20:26:44,900 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 20:26:44,900 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 20:26:45,698 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 20:26:45,730 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:45,746 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 20:26:45,750 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 20:26:45,829 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 20:26:45,829 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 20:26:46,086 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 20:26:46,086 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 20:26:46,086 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 20:26:46,086 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 20:26:46,133 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 20:26:46,133 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1233 ms
+2021-07-22 20:26:46,215 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 20:26:46,286 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 20:26:46,292 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 20:26:46,350 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 20:26:46,352 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 20:26:46,367 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 20:26:46,396 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.008s)
+2021-07-22 20:26:46,404 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 20:26:46,418 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 20:26:46,419 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 20:26:46,437 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.034s)
+2021-07-22 20:26:46,468 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 20:26:46,468 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 20:26:46,471 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 20:26:46,473 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 20:26:46,483 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 20:26:46,500 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 22:15:34,166 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 16360 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 22:15:34,175 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 22:15:34,240 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 22:15:34,240 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 22:15:35,433 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 22:15:35,441 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 22:15:35,466 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 22:53:19,815 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 2948 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 22:53:19,832 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 22:53:19,867 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 22:53:19,867 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 22:53:20,403 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 22:53:20,403 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 22:53:20,416 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 23:28:38,411 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 19964 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:28:38,414 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:28:38,458 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:28:38,458 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:28:39,055 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'servicioEliminarUsuario' defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicioCliente; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class]] for bean 'servicioEliminarUsuario': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=beanServicio; factoryMethodName=servicioEliminarUsuario; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/ceiba/configuracion/BeanServicio.class]] bound.
+2021-07-22 23:28:39,064 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:28:39,076 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'servicioEliminarUsuario', defined in class path resource [com/ceiba/configuracion/BeanServicioCliente.class], could not be registered. A bean with that name has already been defined in class path resource [com/ceiba/configuracion/BeanServicio.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2021-07-22 23:31:48,195 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 18412 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:31:48,197 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:31:48,240 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:31:48,241 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:31:49,112 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:31:49,152 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:31:49,153 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:31:49,168 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:31:49,243 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:31:49,244 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:31:49,513 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:31:49,521 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:31:49,521 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:31:49,521 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:31:49,574 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:31:49,574 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1333 ms
+2021-07-22 23:31:49,668 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:31:49,739 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:31:49,745 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:31:49,808 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:31:49,809 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:31:49,827 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:31:49,865 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.010s)
+2021-07-22 23:31:49,870 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:31:49,886 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:31:49,887 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:31:49,905 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.037s)
+2021-07-22 23:31:49,938 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:31:49,939 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:31:49,941 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:31:49,942 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:31:49,954 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:31:49,972 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:36:05,500 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 18720 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:36:05,503 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:36:05,543 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:36:05,543 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:36:06,449 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:36:06,492 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:36:06,493 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:36:06,494 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:36:06,494 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:36:06,494 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:36:06,494 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:36:06,494 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:36:06,495 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:36:06,508 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:36:06,587 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:36:06,588 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:36:06,855 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:36:06,862 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:36:06,863 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:36:06,863 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:36:06,934 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:36:06,934 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1390 ms
+2021-07-22 23:36:07,017 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:36:07,090 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:36:07,095 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:36:07,158 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:36:07,159 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:36:07,176 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:36:07,209 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.010s)
+2021-07-22 23:36:07,214 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:36:07,229 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:36:07,230 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:36:07,249 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.036s)
+2021-07-22 23:36:07,282 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:36:07,283 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:36:07,284 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:36:07,287 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:36:07,299 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:36:07,316 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:50:43,529 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 18108 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:50:43,532 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:50:43,571 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:50:43,571 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:50:44,475 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:50:44,520 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:50:44,525 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:50:44,525 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:50:44,526 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:50:44,526 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:50:44,526 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:50:44,526 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:50:44,526 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:50:44,541 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:50:44,622 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:50:44,623 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:50:44,896 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:50:44,903 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:50:44,903 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:50:44,903 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:50:44,959 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:50:44,959 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1387 ms
+2021-07-22 23:50:45,050 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:50:45,122 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:50:45,128 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:50:45,197 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:50:45,198 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:50:45,216 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:50:45,254 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.010s)
+2021-07-22 23:50:45,260 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:50:45,275 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:50:45,276 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:50:45,295 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.037s)
+2021-07-22 23:50:45,329 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:50:45,329 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:50:45,332 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:50:45,334 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:50:45,347 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:50:45,362 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:55:49,860 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 16816 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:55:49,863 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:55:49,904 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:55:49,905 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:55:50,805 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:55:50,851 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:55:50,852 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:55:50,852 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:55:50,853 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:55:50,853 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:55:50,854 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:55:50,854 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:55:50,854 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:55:50,870 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:55:50,945 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:55:50,946 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:55:51,226 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:55:51,232 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:55:51,233 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:55:51,233 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:55:51,285 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:55:51,285 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1380 ms
+2021-07-22 23:55:51,371 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:55:51,443 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:55:51,449 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:55:51,515 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:55:51,516 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:55:51,534 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:55:51,571 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.012s)
+2021-07-22 23:55:51,576 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:55:51,591 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:55:51,592 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:55:51,610 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.035s)
+2021-07-22 23:55:51,644 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:55:51,644 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:55:51,647 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:55:51,648 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:55:51,660 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:55:51,676 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:56:55,600 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 16132 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:56:55,603 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:56:55,642 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:56:55,643 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:56:56,533 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:56:56,577 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:56:56,579 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:56:56,579 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:56:56,580 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:56:56,580 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:56:56,580 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:56:56,580 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:56:56,580 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:56:56,595 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:56:56,676 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:56:56,676 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:56:56,939 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:56:56,946 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:56:56,946 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:56:56,946 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:56:56,995 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:56:56,995 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1352 ms
+2021-07-22 23:56:57,074 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:56:57,151 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:56:57,157 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:56:57,224 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:56:57,225 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:56:57,242 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:56:57,278 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.012s)
+2021-07-22 23:56:57,284 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:56:57,298 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:56:57,299 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:56:57,318 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.035s)
+2021-07-22 23:56:57,350 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:56:57,351 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:56:57,354 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:56:57,355 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:56:57,367 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:56:57,386 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:57:12,216 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 1236 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:57:12,219 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:57:12,258 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:57:12,258 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:57:13,294 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:57:13,337 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:57:13,338 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:57:13,338 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:57:13,339 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:57:13,339 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:57:13,339 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:57:13,339 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:57:13,339 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:57:13,353 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:57:13,434 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:57:13,434 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:57:13,697 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:57:13,705 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:57:13,705 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:57:13,705 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:57:13,760 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:57:13,760 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1501 ms
+2021-07-22 23:57:13,842 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:57:13,910 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:57:13,915 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:57:13,983 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:57:13,985 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:57:14,002 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:57:14,036 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.011s)
+2021-07-22 23:57:14,041 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:57:14,055 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:57:14,056 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:57:14,074 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.034s)
+2021-07-22 23:57:14,106 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:57:14,107 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:57:14,110 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:57:14,111 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:57:14,122 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:57:14,139 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:58:24,261 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 13344 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:58:24,264 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:58:24,303 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:58:24,303 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:58:25,225 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:58:25,268 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:58:25,269 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:58:25,270 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:58:25,270 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:25,270 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:25,270 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:58:25,270 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:25,271 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:25,285 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:58:25,364 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:58:25,365 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:58:25,633 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:58:25,640 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:58:25,641 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:58:25,641 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:58:25,695 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:58:25,695 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1392 ms
+2021-07-22 23:58:25,783 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:58:25,861 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:58:25,868 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:58:25,934 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:58:25,935 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:58:25,951 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:58:25,985 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.010s)
+2021-07-22 23:58:25,992 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:58:26,006 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:58:26,007 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:58:26,028 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.038s)
+2021-07-22 23:58:26,060 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-07-22 23:58:26,060 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:58:26,063 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:58:26,065 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:58:26,076 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:58:26,093 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted
+2021-07-22 23:58:35,955 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application using Java 11.0.10 on ALEJANDRO-URBINA with PID 10136 (C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\build\classes\java\main started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio)
+2021-07-22 23:58:35,958 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-07-22 23:58:36,000 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-22 23:58:36,000 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-22 23:58:36,885 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-07-22 23:58:36,931 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-22 23:58:36,933 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:58:36,933 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:58:36,933 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:36,933 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:36,933 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-22 23:58:36,934 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:36,934 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-22 23:58:36,948 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-22 23:58:37,030 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-07-22 23:58:37,031 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-07-22 23:58:37,298 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-07-22 23:58:37,305 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-07-22 23:58:37,305 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-07-22 23:58:37,305 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-22 23:58:37,357 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-07-22 23:58:37,357 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1357 ms
+2021-07-22 23:58:37,443 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-07-22 23:58:37,519 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-07-22 23:58:37,525 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-07-22 23:58:37,593 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-22 23:58:37,594 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-22 23:58:37,612 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-22 23:58:37,647 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.011s)
+2021-07-22 23:58:37,653 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2021-07-22 23:58:37,669 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema "PUBLIC": << Empty Schema >>
+2021-07-22 23:58:37,670 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Migrating schema "PUBLIC" to version 1.0 - schema
+2021-07-22 23:58:37,689 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.037s)
+2021-07-22 23:58:37,724 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositorioClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/repositorio/RepositorioClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/ingresar.sql]
+2021-07-22 23:58:37,724 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-07-22 23:58:37,727 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-07-22 23:58:37,728 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-07-22 23:58:37,740 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-22 23:58:37,758 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'repositorioClienteMysql' defined in URL [jar:file:/C:/Users/alejandro.urbina/Desktop/ADN/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/usuario/adaptador/repositorio/RepositorioClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/ingresar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.ceiba.Application.main(Application.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/ingresar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 20 common frames omitted

@@ -11,18 +11,19 @@ import java.util.List;
 
 @Component
 public class DaoClienteMysql implements DaoCliente {
+
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
     @SqlStatement(namespace=&quot;cliente&quot;, value=&quot;listar&quot;)
     private static String sqlListar;
 
-<span class="nc" id="L19">    public DaoClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L20">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L21">    }</span>
+<span class="fc" id="L20">    public DaoClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L21">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L22">    }</span>
 
     @Override
     public List&lt;DtoCliente&gt; listar() {
-<span class="nc" id="L25">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoCliente());</span>
+<span class="nc" id="L26">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoCliente());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

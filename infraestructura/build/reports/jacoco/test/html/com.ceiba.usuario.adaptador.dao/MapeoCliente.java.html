@@ -2,11 +2,11 @@
 
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.usuario.modelo.dto.DtoCliente;
-import com.ceiba.usuario.modelo.dto.DtoUsuario;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 <span class="nc" id="L12">public class MapeoCliente implements RowMapper&lt;DtoCliente&gt;, MapperResult {</span>
@@ -17,9 +17,10 @@ import java.time.LocalDateTime;
 <span class="nc" id="L17">        String nombre = resultSet.getString(&quot;nombre&quot;);</span>
 <span class="nc" id="L18">        String cedula = resultSet.getString(&quot;cedula&quot;);</span>
 <span class="nc" id="L19">        String genero = resultSet.getString(&quot;genero&quot;);</span>
-<span class="nc" id="L20">        LocalDateTime fecha = extraerLocalDateTime(resultSet, &quot;fecha_nacimiento&quot;);</span>
+<span class="nc" id="L20">        Double precioEntrada = resultSet.getDouble(&quot;precio_entrada&quot;);</span>
+<span class="nc" id="L21">        LocalDateTime fecha = extraerLocalDateTime(resultSet, &quot;fecha_nacimiento&quot;);</span>
 
-<span class="nc" id="L22">        return new DtoCliente(id,nombre,cedula, genero,fecha);</span>
+<span class="nc" id="L23">        return new DtoCliente(id,nombre,cedula, genero, precioEntrada,fecha);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

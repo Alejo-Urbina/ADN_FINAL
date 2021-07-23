@@ -3,12 +3,12 @@
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 @Getter
-<span class="nc" id="L11">@Setter</span>
+<span class="pc" id="L11">@Setter</span>
 public class Cliente {
     private static final String SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO = &quot;Se debe ingresar el nombre de usuario&quot;;
     private static final String SE_DEBE_INGRESAR_LA_CEDULA = &quot;Se debe ingresar la cedula de usuario&quot;;
@@ -18,11 +18,11 @@ public class Cliente {
 <span class="nc" id="L18">    private Long id;</span>
 <span class="nc" id="L19">    private String nombre;</span>
 <span class="fc" id="L20">    private String cedula;</span>
-<span class="nc" id="L21">    private String genero;</span>
+<span class="fc" id="L21">    private String genero;</span>
 <span class="nc" id="L22">    private Double precioEntrada;</span>
-<span class="nc" id="L23">    private LocalDateTime fechaNacimiento;</span>
+<span class="fc" id="L23">    private LocalDate fechaNacimiento;</span>
 
-<span class="fc" id="L25">    public Cliente(Long id,String nombre, String cedula, String genero, Double precioEntrada, LocalDateTime fechaNacimiento) {</span>
+<span class="fc" id="L25">    public Cliente(Long id,String nombre, String cedula, String genero, Double precioEntrada, LocalDate fechaNacimiento) {</span>
 <span class="fc" id="L26">        validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);</span>
 <span class="fc" id="L27">        validarObligatorio(cedula, SE_DEBE_INGRESAR_LA_CEDULA);</span>
 <span class="fc" id="L28">        validarObligatorio(genero, SE_DEBE_INGRESAR_EL_GENERO);</span>

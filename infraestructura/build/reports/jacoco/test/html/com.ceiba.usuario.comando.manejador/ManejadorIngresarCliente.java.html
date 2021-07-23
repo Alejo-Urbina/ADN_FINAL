@@ -14,10 +14,10 @@ public class ManejadorIngresarCliente implements ManejadorComandoRespuesta&lt;Co
     private final FabricaCliente fabricaCliente;
     private final ServicioIngresarCliente servicioIngresarCliente;
 
-<span class="nc" id="L17">    public ManejadorIngresarCliente(FabricaCliente fabricaCliente, ServicioIngresarCliente servicioIngresarCliente) {</span>
-<span class="nc" id="L18">        this.fabricaCliente = fabricaCliente;</span>
-<span class="nc" id="L19">        this.servicioIngresarCliente = servicioIngresarCliente;</span>
-<span class="nc" id="L20">    }</span>
+<span class="fc" id="L17">    public ManejadorIngresarCliente(FabricaCliente fabricaCliente, ServicioIngresarCliente servicioIngresarCliente) {</span>
+<span class="fc" id="L18">        this.fabricaCliente = fabricaCliente;</span>
+<span class="fc" id="L19">        this.servicioIngresarCliente = servicioIngresarCliente;</span>
+<span class="fc" id="L20">    }</span>
 
     @Override
     public ComandoRespuesta&lt;Long&gt; ejecutar(ComandoCliente comandoCliente) {

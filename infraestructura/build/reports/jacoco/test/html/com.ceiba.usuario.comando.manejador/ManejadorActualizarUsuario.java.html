@@ -14,10 +14,10 @@ public class ManejadorActualizarUsuario implements ManejadorComando&lt;ComandoUs
     private final FabricaUsuario fabricaUsuario;
     private final ServicioActualizarUsuario servicioActualizarUsuario;
 
-<span class="nc" id="L17">    public ManejadorActualizarUsuario(FabricaUsuario fabricaUsuario, ServicioActualizarUsuario servicioActualizarUsuario) {</span>
-<span class="nc" id="L18">        this.fabricaUsuario = fabricaUsuario;</span>
-<span class="nc" id="L19">        this.servicioActualizarUsuario = servicioActualizarUsuario;</span>
-<span class="nc" id="L20">    }</span>
+<span class="fc" id="L17">    public ManejadorActualizarUsuario(FabricaUsuario fabricaUsuario, ServicioActualizarUsuario servicioActualizarUsuario) {</span>
+<span class="fc" id="L18">        this.fabricaUsuario = fabricaUsuario;</span>
+<span class="fc" id="L19">        this.servicioActualizarUsuario = servicioActualizarUsuario;</span>
+<span class="fc" id="L20">    }</span>
 
     public void ejecutar(ComandoUsuario comandoUsuario) {
 <span class="nc" id="L23">        Usuario usuario = this.fabricaUsuario.crear(comandoUsuario);</span>

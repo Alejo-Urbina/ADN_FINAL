@@ -18,9 +18,9 @@ public class DaoUsuarioMysql implements DaoUsuario {
     @SqlStatement(namespace=&quot;usuario&quot;, value=&quot;listar&quot;)
     private static String sqlListar;
 
-<span class="nc" id="L21">    public DaoUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L22">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L23">    }</span>
+<span class="fc" id="L21">    public DaoUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L22">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L23">    }</span>
 
     @Override
     public List&lt;DtoUsuario&gt; listar() {

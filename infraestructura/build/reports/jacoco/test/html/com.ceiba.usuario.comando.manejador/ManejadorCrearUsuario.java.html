@@ -15,10 +15,10 @@ public class ManejadorCrearUsuario implements ManejadorComandoRespuesta&lt;Coman
     private final FabricaUsuario fabricaUsuario;
     private final ServicioCrearUsuario servicioCrearUsuario;
 
-<span class="nc" id="L18">    public ManejadorCrearUsuario(FabricaUsuario fabricaUsuario, ServicioCrearUsuario servicioCrearUsuario) {</span>
-<span class="nc" id="L19">        this.fabricaUsuario = fabricaUsuario;</span>
-<span class="nc" id="L20">        this.servicioCrearUsuario = servicioCrearUsuario;</span>
-<span class="nc" id="L21">    }</span>
+<span class="fc" id="L18">    public ManejadorCrearUsuario(FabricaUsuario fabricaUsuario, ServicioCrearUsuario servicioCrearUsuario) {</span>
+<span class="fc" id="L19">        this.fabricaUsuario = fabricaUsuario;</span>
+<span class="fc" id="L20">        this.servicioCrearUsuario = servicioCrearUsuario;</span>
+<span class="fc" id="L21">    }</span>
 
     public ComandoRespuesta&lt;Long&gt; ejecutar(ComandoUsuario comandoUsuario) {
 <span class="nc" id="L24">        Usuario usuario = this.fabricaUsuario.crear(comandoUsuario);</span>

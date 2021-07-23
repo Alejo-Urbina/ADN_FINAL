@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0s</div>
+<div class="counter">0.003s</div>
 <p>duration</p>
 </div>
 </td>
@@ -129,8 +129,16 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in file [C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\usuario\adaptador\dao\DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in com.ceiba.ApplicationMock: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
@@ -146,16 +154,59 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 51 more
-Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710)
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689)
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
-	... 65 more
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:75)
+	at org.flywaydb.core.internal.command.DbValidate.validate(DbValidate.java:108)
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:1461)
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:82)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1349)
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1341)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1696)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1341)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1912)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1854)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 66 more
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827)
+	at org.h2.command.Parser.parseSelect(Parser.java:2959)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649)
+	at org.h2.command.Parser.parseQuery(Parser.java:2620)
+	at org.h2.command.Parser.parsePrepared(Parser.java:868)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.prepareStatement(JdbcTemplate.java:325)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.queryForInt(JdbcTemplate.java:138)
+	at org.flywaydb.core.internal.database.h2.H2Schema.doExists(H2Schema.java:48)
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:73)
+	... 80 more
 </pre>
 </span>
 </div>
@@ -172,7 +223,7 @@ Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se
 </thead>
 <tr>
 <td class="failures">validarListadoClientes</td>
-<td class="failures">0s</td>
+<td class="failures">0.003s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -180,9 +231,32 @@ Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2021-07-22 23:54:45.209  INFO 2112 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-07-22 23:54:45.212  INFO 2112 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2021-07-22 23:54:45.212  INFO 2112 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78c688ad, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b932a87, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@43b90599, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@fb164d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4cb4751f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4ef1b91c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@456fe896, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1dfed708, org.springframework.test.context.event.EventPublishingTestExecutionListener@728d5525, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@31772b31, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@b665ed1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@604b8e22, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@78f7db73, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@705149ff, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49f801f2]
+<pre>08:32:04.227 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.235 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+08:32:04.282 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+08:32:04.379 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+08:32:04.416 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]: class path resource [com/ceiba/usuario/controlador/ConsultaControladorClienteTest-context.xml] does not exist
+08:32:04.416 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]: class path resource [com/ceiba/usuario/controlador/ConsultaControladorClienteTestContext.groovy] does not exist
+08:32:04.416 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+08:32:04.543 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.543 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]: using defaults.
+08:32:04.543 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+08:32:04.580 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4575750a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@38a6a244, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5e6414c2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1eb1d796, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70022c6f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7dbb14a9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@307ddd8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@139ab749, org.springframework.test.context.event.EventPublishingTestExecutionListener@729a9001, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5721cca7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6af53286, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2c93e06e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@aaf6765, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@53b2d663, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1010bf91]
+08:32:04.580 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.596 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.612 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5f3cc1ac testClass = ConsultaControladorClienteTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@17d9868d testClass = ConsultaControladorClienteTest, locations = '{}', classes = '{class com.ceiba.ApplicationMock}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@3e425c3f, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@52b2c6df, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@674ab4c6, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@fe7c2678, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5043fcae, [ImportsContextCustomizer@6c432143 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4ce0ee7d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@cbbc5d2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+08:32:04.612 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.612 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.ceiba.usuario.controlador.ConsultaControladorClienteTest]
+08:32:04.627 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@5f3cc1ac testClass = ConsultaControladorClienteTest, testInstance = com.ceiba.usuario.controlador.ConsultaControladorClienteTest@73fdfbab, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@17d9868d testClass = ConsultaControladorClienteTest, locations = '{}', classes = '{class com.ceiba.ApplicationMock}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@3e425c3f, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@52b2c6df, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@674ab4c6, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@fe7c2678, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5043fcae, [ImportsContextCustomizer@6c432143 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4ce0ee7d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@cbbc5d2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]].
+08:32:04.679 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -192,20 +266,41 @@ Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.2)
 
-2021-07-22 23:54:45.245  INFO 2112 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : Starting ConsultaControladorClienteTest using Java 11.0.10 on ALEJANDRO-URBINA with PID 2112 (started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura)
-2021-07-22 23:54:45.245  INFO 2112 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : No active profile set, falling back to default profiles: default
-2021-07-22 23:54:45.532  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Starting...
-2021-07-22 23:54:45.533  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Start completed.
-2021-07-22 23:54:45.544  WARN 2112 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in file [C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\usuario\adaptador\dao\DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-2021-07-22 23:54:45.544  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown initiated...
-2021-07-22 23:54:45.546  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown completed.
-2021-07-22 23:54:45.547  INFO 2112 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2021-07-23 08:32:05.407  INFO 12676 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : Starting ConsultaControladorClienteTest using Java 11.0.10 on ALEJANDRO-URBINA with PID 12676 (started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura)
+2021-07-23 08:32:05.411  INFO 12676 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : No active profile set, falling back to default profiles: default
+2021-07-23 08:32:06.700  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Starting...
+2021-07-23 08:32:07.074  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Start completed.
+2021-07-23 08:32:07.843  INFO 12676 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-07-23 08:32:07.867  INFO 12676 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2021-07-23 08:32:07.912  INFO 12676 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.1 by Boxfuse
+2021-07-23 08:32:07.930  INFO 12676 --- [    Test worker] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-23 08:32:07.981  WARN 12676 --- [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-23 08:32:08.028  WARN 12676 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in com.ceiba.ApplicationMock: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+2021-07-23 08:32:08.028  INFO 12676 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2021-07-23 08:32:08.246  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown initiated...
+2021-07-23 08:32:08.246  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown completed.
+2021-07-23 08:32:08.262  INFO 12676 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-07-22 23:54:45.553 ERROR 2112 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2021-07-23 08:32:08.310 ERROR 12676 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in file [C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\usuario\adaptador\dao\DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610) ~[spring-beans-5.3.8.jar:5.3.8]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in com.ceiba.ApplicationMock: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.8.jar:5.3.8]
@@ -271,16 +366,59 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710) ~[spring-core-5.3.8.jar:5.3.8]
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689) ~[spring-core-5.3.8.jar:5.3.8]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422) ~[spring-beans-5.3.8.jar:5.3.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.3.8.jar:5.3.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
-	... 65 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:75) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.command.DbValidate.validate(DbValidate.java:108) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:1461) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:82) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1349) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1341) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1696) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1341) ~[flyway-core-5.2.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1912) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1854) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	... 66 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.prepareStatement(JdbcTemplate.java:325) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.queryForInt(JdbcTemplate.java:138) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.database.h2.H2Schema.doExists(H2Schema.java:48) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:73) ~[flyway-core-5.2.1.jar:na]
+	... 80 common frames omitted
 
 
   .   ____          _            __ _ _
@@ -291,20 +429,40 @@ Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.2)
 
-2021-07-22 23:54:45.586  INFO 2112 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : Starting ConsultaControladorClienteTest using Java 11.0.10 on ALEJANDRO-URBINA with PID 2112 (started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura)
-2021-07-22 23:54:45.587  INFO 2112 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : No active profile set, falling back to default profiles: default
-2021-07-22 23:54:45.829  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Starting...
-2021-07-22 23:54:45.830  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Start completed.
-2021-07-22 23:54:45.839  WARN 2112 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in file [C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\usuario\adaptador\dao\DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-2021-07-22 23:54:45.840  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown initiated...
-2021-07-22 23:54:45.841  INFO 2112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown completed.
-2021-07-22 23:54:45.842  INFO 2112 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2021-07-23 08:32:08.368  INFO 12676 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : Starting ConsultaControladorClienteTest using Java 11.0.10 on ALEJANDRO-URBINA with PID 12676 (started by alejandro.urbina in C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura)
+2021-07-23 08:32:08.368  INFO 12676 --- [    Test worker] c.c.u.c.ConsultaControladorClienteTest   : No active profile set, falling back to default profiles: default
+2021-07-23 08:32:08.629  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Starting...
+2021-07-23 08:32:08.629  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Start completed.
+2021-07-23 08:32:08.965  INFO 12676 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-07-23 08:32:08.965  INFO 12676 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2021-07-23 08:32:08.997  INFO 12676 --- [    Test worker] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:testdb (H2 1.4)
+2021-07-23 08:32:08.997  WARN 12676 --- [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 1.4.200 is newer than this version of Flyway and support has not been tested.
+2021-07-23 08:32:09.014  WARN 12676 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in com.ceiba.ApplicationMock: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+2021-07-23 08:32:09.014  INFO 12676 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2021-07-23 08:32:09.231  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown initiated...
+2021-07-23 08:32:09.238  INFO 12676 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pool - Shutdown completed.
+2021-07-23 08:32:09.239  INFO 12676 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-07-22 23:54:45.849 ERROR 2112 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2021-07-23 08:32:09.256 ERROR 12676 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in file [C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\usuario\adaptador\dao\DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610) ~[spring-beans-5.3.8.jar:5.3.8]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in com.ceiba.ApplicationMock: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.8.jar:5.3.8]
@@ -369,18 +527,61 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710) ~[spring-core-5.3.8.jar:5.3.8]
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689) ~[spring-core-5.3.8.jar:5.3.8]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422) ~[spring-beans-5.3.8.jar:5.3.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.3.8.jar:5.3.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
-	... 64 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
 
-2021-07-22 23:54:45.856 ERROR 2112 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4cb4751f] to prepare test instance [com.ceiba.usuario.controlador.ConsultaControladorClienteTest@78498a6a]
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:75) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.command.DbValidate.validate(DbValidate.java:108) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:1461) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:82) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1349) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1341) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1696) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1341) ~[flyway-core-5.2.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1912) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1854) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	... 65 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.prepareStatement(JdbcTemplate.java:325) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.queryForInt(JdbcTemplate.java:138) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.database.h2.H2Schema.doExists(H2Schema.java:48) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:73) ~[flyway-core-5.2.1.jar:na]
+	... 79 common frames omitted
+
+2021-07-23 08:32:09.281 ERROR 12676 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70022c6f] to prepare test instance [com.ceiba.usuario.controlador.ConsultaControladorClienteTest@73fdfbab]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.8.jar:5.3.8]
@@ -435,8 +636,16 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in file [C:\Users\alejandro.urbina\Desktop\ADN\java-arquitectura-hexagonal\microservicio\infraestructura\build\classes\java\main\com\ceiba\usuario\adaptador\dao\DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610) ~[spring-beans-5.3.8.jar:5.3.8]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in com.ceiba.ApplicationMock: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.8.jar:5.3.8]
@@ -452,16 +661,59 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.8.jar:5.3.8]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.8.jar:5.3.8]
 	... 51 common frames omitted
-Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:710) ~[spring-core-5.3.8.jar:5.3.8]
-	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:689) ~[spring-core-5.3.8.jar:5.3.8]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19) ~[comun-infraestructura-0.0.1-SNAPSHOT.jar:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422) ~[spring-beans-5.3.8.jar:5.3.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.3.8.jar:5.3.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
-	... 65 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to check whether schema &quot;PUBLIC&quot; exists
+----------------------------------------------
+SQL State  : 42S02
+Error Code : 42102
+Message    : Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:75) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.command.DbValidate.validate(DbValidate.java:108) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.doValidate(Flyway.java:1461) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.access$100(Flyway.java:82) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1349) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1341) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1696) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1341) ~[flyway-core-5.2.1.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1912) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1854) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	... 66 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;schemata&quot; not found; SQL statement:
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=? [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableFilter(Parser.java:1970) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelect(Parser.java:2959) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseQuery(Parser.java:2620) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:868) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.prepareStatement(JdbcTemplate.java:325) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.queryForInt(JdbcTemplate.java:138) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.database.h2.H2Schema.doExists(H2Schema.java:48) ~[flyway-core-5.2.1.jar:na]
+	at org.flywaydb.core.internal.database.base.Schema.exists(Schema.java:73) ~[flyway-core-5.2.1.jar:na]
+	... 80 common frames omitted
 
 </pre>
 </span>
@@ -474,7 +726,7 @@ Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.0.2</a> at Jul 22, 2021, 11:54:46 PM</p>
+<a href="http://www.gradle.org">Gradle 7.0.2</a> at Jul 23, 2021, 8:32:09 AM</p>
 </div>
 </div>
 </body>

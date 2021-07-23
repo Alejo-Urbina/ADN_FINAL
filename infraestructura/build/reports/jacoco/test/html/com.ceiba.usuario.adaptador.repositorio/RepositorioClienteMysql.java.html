@@ -21,9 +21,9 @@ public class RepositorioClienteMysql implements RepositorioCliente {
     @SqlStatement(namespace=&quot;cliente&quot;, value=&quot;existe&quot;)
     private static String sqlExiste;
 
-<span class="nc" id="L24">    public RepositorioClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L25">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L26">    }</span>
+<span class="fc" id="L24">    public RepositorioClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L25">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L26">    }</span>
 
     @Override
     public Long crear(Cliente cliente) {

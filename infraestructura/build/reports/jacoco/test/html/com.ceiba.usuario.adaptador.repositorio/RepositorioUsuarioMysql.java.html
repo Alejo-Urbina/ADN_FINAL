@@ -27,9 +27,9 @@ public class RepositorioUsuarioMysql implements RepositorioUsuario {
     @SqlStatement(namespace=&quot;usuario&quot;, value=&quot;existeExcluyendoId&quot;) 
     private static String sqlExisteExcluyendoId;
 
-<span class="nc" id="L30">    public RepositorioUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="nc" id="L31">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="nc" id="L32">    }</span>
+<span class="fc" id="L30">    public RepositorioUsuarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L31">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L32">    }</span>
 
     @Override
     public Long crear(Usuario usuario) {

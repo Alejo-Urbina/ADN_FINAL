@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cliente.modelo.entidad.ClienteTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-07-23T04:54:36" hostname="ALEJANDRO-URBIN" time="0.001">
+<testsuite name="com.ceiba.cliente.modelo.entidad.ClienteTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-07-23T13:29:55" hostname="ALEJANDRO-URBIN" time="0.0">
   <properties/>
   <testcase name="validarPrecioEntradaClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
-  <testcase name="validarNombreClienteVacio" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.001"/>
+  <testcase name="validarNombreClienteVacio" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
   <testcase name="validarCedulaClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
   <testcase name="validarGeneroClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
   <testcase name="validarFechaClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>

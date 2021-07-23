@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class ManejadorEliminarCliente  implements ManejadorComando&lt;Long&gt; {
     private final ServicioEliminarCliente servicioEliminarCliente;
 
-<span class="nc" id="L11">    public ManejadorEliminarCliente(ServicioEliminarCliente servicioEliminarCliente) {</span>
-<span class="nc" id="L12">        this.servicioEliminarCliente = servicioEliminarCliente;</span>
-<span class="nc" id="L13">    }</span>
+<span class="fc" id="L11">    public ManejadorEliminarCliente(ServicioEliminarCliente servicioEliminarCliente) {</span>
+<span class="fc" id="L12">        this.servicioEliminarCliente = servicioEliminarCliente;</span>
+<span class="fc" id="L13">    }</span>
 
     public void ejecutar(Long idUsuario) {
 <span class="nc" id="L16">        this.servicioEliminarCliente.ejecutar(idUsuario);</span>

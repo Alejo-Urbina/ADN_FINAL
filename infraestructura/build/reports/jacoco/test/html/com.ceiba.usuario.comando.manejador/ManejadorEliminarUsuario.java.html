@@ -10,9 +10,9 @@ public class ManejadorEliminarUsuario implements ManejadorComando&lt;Long&gt; {
 
     private final ServicioEliminarUsuario servicioEliminarUsuario;
 
-<span class="nc" id="L13">    public ManejadorEliminarUsuario(ServicioEliminarUsuario servicioEliminarUsuario) {</span>
-<span class="nc" id="L14">        this.servicioEliminarUsuario = servicioEliminarUsuario;</span>
-<span class="nc" id="L15">    }</span>
+<span class="fc" id="L13">    public ManejadorEliminarUsuario(ServicioEliminarUsuario servicioEliminarUsuario) {</span>
+<span class="fc" id="L14">        this.servicioEliminarUsuario = servicioEliminarUsuario;</span>
+<span class="fc" id="L15">    }</span>
 
     public void ejecutar(Long idUsuario) {
 <span class="nc" id="L18">        this.servicioEliminarUsuario.ejecutar(idUsuario);</span>

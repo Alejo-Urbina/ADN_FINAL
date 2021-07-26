@@ -72,12 +72,12 @@ public class ServicioIngresarCliente {
                 String.valueOf(LocalDate.now().getDayOfWeek()) == DiaFinDeSemana.SUNDAY.toString()) {
             cliente.setPrecioEntrada(cliente.getPrecioEntrada() + (cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO));
         }
-        if (cumpleañosCliente(cliente)){
+        if (cumpleanosCliente(cliente)){
             cliente.setPrecioEntrada(0d);
         }
     }
 
-    private boolean cumpleañosCliente(Cliente cliente) {
+    private boolean cumpleanosCliente(Cliente cliente) {
         return (cliente.getFechaNacimiento().getMonth() == LocalDate.now().getMonth() &&
                 cliente.getFechaNacimiento().getDayOfMonth() == LocalDate.now().getDayOfMonth());
     }

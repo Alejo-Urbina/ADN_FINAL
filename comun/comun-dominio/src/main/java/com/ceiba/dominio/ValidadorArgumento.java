@@ -96,9 +96,4 @@ public class ValidadorArgumento {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }
-
-//    public static void validarMayor(LocalDate cliente){
-//	    if (cliente.getFechaNacimiento().getMonth() == LocalDate.now().getMonth() &&
-//                cliente.getFechaNacimiento().getDayOfMonth() == LocalDate.now().getDayOfMonth())
-//    }
 }

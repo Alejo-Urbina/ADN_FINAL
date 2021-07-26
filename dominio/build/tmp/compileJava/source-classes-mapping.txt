@@ -8,5 +8,9 @@ com/ceiba/usuario/modelo/entidad/Cliente.java
  com.ceiba.usuario.modelo.entidad.Cliente
 com/ceiba/usuario/servicio/ServicioEliminarCliente.java
  com.ceiba.usuario.servicio.ServicioEliminarCliente
+com/ceiba/usuario/constante/TipoGenero.java
+ com.ceiba.usuario.constante.TipoGenero
+com/ceiba/usuario/constante/DiaFinDeSemana.java
+ com.ceiba.usuario.constante.DiaFinDeSemana
 com/ceiba/usuario/servicio/ServicioIngresarCliente.java
  com.ceiba.usuario.servicio.ServicioIngresarCliente

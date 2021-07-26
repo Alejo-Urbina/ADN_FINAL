@@ -62,7 +62,7 @@ public class ServicioCrearClienteTest {
     }
 
     /**
-     * Prueba el ingreso de un cliente a la discoteca
+     * Prueba que se arroje la excepcion de solo entrar mayores de edad
      */
     @Test
     public void validarIngresoClienteMayorEdadTest() {
@@ -78,6 +78,9 @@ public class ServicioCrearClienteTest {
         BasePrueba.assertThrows(() -> servicioIngresarCliente.ejecutar(cliente), ExcepcionMayorEdad.class, "El cliente es menor de edad");
     }
 
+    /**
+     * Prueba el caso de que entre alguien que este cumpliendo años
+     */
     @Test
     public void validarIngresoClienteCumpleañeroTest() {
         // Arrange
@@ -90,6 +93,9 @@ public class ServicioCrearClienteTest {
         assertTrue(cliente.getPrecioEntrada() == 0);
     }
 
+    /**
+     * Prueba el calculo del precio de una mujer al ingresar a la discoteca y si es fin de semana cobrar el 5% mas
+     */
     @Test
     public void validarPrecioClienteMujerTest() {
         // Arrange
@@ -107,6 +113,9 @@ public class ServicioCrearClienteTest {
         }
     }
 
+    /**
+     * Prueba el calculo del precio de un hombre al ingresar a la discoteca y si es fin de semana cobrar el 5% mas
+     */
     @Test
     public void validarPrecioClienteHombreTest() {
         // Arrange

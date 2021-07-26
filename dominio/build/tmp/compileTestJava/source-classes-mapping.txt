@@ -1,13 +1,13 @@
-com/ceiba/cliente/modelo/entidad/ClienteTest.java
- com.ceiba.cliente.modelo.entidad.ClienteTest
+com/ceiba/cliente/servicio/ServicioEliminarClienteTest.java
+ com.ceiba.cliente.servicio.ServicioEliminarClienteTest
 com/ceiba/BasePrueba.java
  com.ceiba.BasePrueba
  com.ceiba.BasePrueba$Thunk
 com/ceiba/cliente/builder/ClienteTestBuilder.java
  com.ceiba.cliente.builder.ClienteTestBuilder
+com/ceiba/cliente/modelo/entidad/ClienteTest.java
+ com.ceiba.cliente.modelo.entidad.ClienteTest
 com/ceiba/cliente/servicio/ServicioCrearClienteTest.java
  com.ceiba.cliente.servicio.ServicioCrearClienteTest
-com/ceiba/cliente/servicio/ServicioEliminarClienteTest.java
- com.ceiba.cliente.servicio.ServicioEliminarClienteTest
 com/ceiba/cliente/modelo/dto/ClienteDtoTest.java
  com.ceiba.cliente.modelo.dto.ClienteDtoTest

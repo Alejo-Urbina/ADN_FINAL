@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cliente.modelo.entidad.ClienteTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-07-25T23:54:45" hostname="ALEJANDRO-URBIN" time="0.143">
+<testsuite name="com.ceiba.cliente.modelo.entidad.ClienteTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-07-26T01:51:58" hostname="ALEJANDRO-URBIN" time="0.146">
   <properties/>
-  <testcase name="validarExcepcionNombreTest" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.142"/>
-  <testcase name="validarPrecioEntradaClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
-  <testcase name="validarNombreClienteVacio" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
-  <testcase name="validarCedulaClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
-  <testcase name="validarGeneroClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
-  <testcase name="validarFechaClienteRequerido" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
+  <testcase name="validarExcepcionCedulaTest" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.144"/>
+  <testcase name="validarExcepcionNombreTest" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.001"/>
+  <testcase name="validarExcepcionGeneroTest" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.0"/>
+  <testcase name="validarExcepcionFechaNacimientoTest" classname="com.ceiba.cliente.modelo.entidad.ClienteTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

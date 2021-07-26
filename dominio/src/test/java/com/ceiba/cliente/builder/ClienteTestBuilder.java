@@ -21,35 +21,6 @@ public class ClienteTestBuilder {
         this.fechaNacimiento = LocalDate.of(2000,05,03);
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public Double getPrecioEntrada() {
-        return precioEntrada;
-    }
-
-    public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public ClienteTestBuilder setId(Long id) {
-        this.id = id;
-        return this;
-    }
-
     public ClienteTestBuilder setNombre(String nombre) {
         this.nombre = nombre;
         return this;
@@ -62,11 +33,6 @@ public class ClienteTestBuilder {
 
     public ClienteTestBuilder setGenero(String genero) {
         this.genero = genero;
-        return this;
-    }
-
-    public ClienteTestBuilder setPrecioEntrada(Double precioEntrada) {
-        this.precioEntrada = precioEntrada;
         return this;
     }
 

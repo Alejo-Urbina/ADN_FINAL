@@ -1,4 +1,4 @@
-package com.ceiba.usuario.builder;
+package com.ceiba.cliente.builder;
 
 import com.ceiba.usuario.comando.ComandoCliente;
 

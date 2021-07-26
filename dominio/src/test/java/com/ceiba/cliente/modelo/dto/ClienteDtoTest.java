@@ -9,6 +9,9 @@ import java.time.LocalDate;
 
 public class ClienteDtoTest {
 
+    /**
+     * Prueba el ingreso de los campos de un cliente a la discoteca
+     */
     @Test
     public void validarCamposCliente(){
         // Arrange

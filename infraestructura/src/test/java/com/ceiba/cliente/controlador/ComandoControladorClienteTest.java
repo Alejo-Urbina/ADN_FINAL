@@ -1,8 +1,9 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.cliente.controlador;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.usuario.builder.ComandoClienteTestDataBuilder;
+import com.ceiba.cliente.builder.ComandoClienteTestDataBuilder;
 import com.ceiba.usuario.comando.ComandoCliente;
+import com.ceiba.usuario.controlador.ComandoControladorCliente;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

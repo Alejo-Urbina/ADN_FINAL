@@ -54,8 +54,8 @@ pipeline {
 		sh 'ls'
 		echo "------------>Lista de carpetas -a <------------"
 		sh 'ls -a'
-		sh 'chmod +x gradlew'
-		sh './gradlew --b ./microservicio/build.gradle clean test'
+		sh 'chmod +x ./microservicio/gradlew'
+		sh './microservicio/gradlew --b ./microservicio/build.gradle clean test'
       }
     }
 
@@ -73,7 +73,7 @@ pipeline {
         echo "------------>Build<------------"
         //Construir sin tarea test que se ejecutó previamente
 
-		sh './gradlew --b ./build.gradle build -x test'
+		sh './microservicio/gradlew --b ./microservicio/build.gradle build -x test'
       }
     }
   }

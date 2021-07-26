@@ -3,7 +3,7 @@ package com.ceiba.usuario.modelo.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Getter
 @AllArgsConstructor
@@ -13,5 +13,5 @@ public class DtoCliente {
     private String cedula;
     private String genero;
     private Double precioEntrada;
-    private LocalDateTime fechaNacimiento;
+    private LocalDate fechaNacimiento;
 }

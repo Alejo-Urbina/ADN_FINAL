@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServicioIngresarCliente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dominio</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.usuario.servicio</a> &gt; <span class="el_source">ServicioIngresarCliente.java</span></div><h1>ServicioIngresarCliente.java</h1><pre class="source lang-java linenums">package com.ceiba.usuario.servicio;
 
+import com.ceiba.dominio.excepcion.ExcepcionMayorEdad;
 import com.ceiba.usuario.modelo.entidad.Cliente;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
@@ -15,74 +16,74 @@ public class ServicioIngresarCliente {
     private static final String EL_CLIENTE_YA_EXISTE_EN_EL_SISTEMA = &quot;El cliente ya existe en el sistema&quot;;
     private static final String EL_CLIENTE_ES_MENOR_DE_EDAD = &quot;El cliente es menor de edad&quot;;
     private static final int NUMERO_MAYOR_EDAD = 18;
-<span class="fc" id="L18">    private static final Double PRECIO_ENTRADA_HOMBRE = 15000d;</span>
-<span class="fc" id="L19">    private static final Double PRECIO_ENTRADA_MUJER = 10000d;</span>
+<span class="nc" id="L19">    private static final Double PRECIO_ENTRADA_HOMBRE = 15000d;</span>
+<span class="nc" id="L20">    private static final Double PRECIO_ENTRADA_MUJER = 10000d;</span>
     private static final String HOMBRE = &quot;H&quot;;
     private static final String MUJER = &quot;M&quot;;
     private static final String SABADO = &quot;SATURDAY&quot;;
     private static final String DOMINGO = &quot;SUNDAY&quot;;
-<span class="fc" id="L24">    private static final Double TASA_AUMENTO_SADADO_O_DOMINGO = 0.05d;</span>
+<span class="nc" id="L25">    private static final Double TASA_AUMENTO_SADADO_O_DOMINGO = 0.05d;</span>
 
     private final  RepositorioCliente repositorioCliente;
 
-<span class="fc" id="L28">    public ServicioIngresarCliente(RepositorioCliente repositorioCliente) {</span>
-<span class="fc" id="L29">        this.repositorioCliente = repositorioCliente;</span>
-<span class="fc" id="L30">    }</span>
+<span class="nc" id="L29">    public ServicioIngresarCliente(RepositorioCliente repositorioCliente) {</span>
+<span class="nc" id="L30">        this.repositorioCliente = repositorioCliente;</span>
+<span class="nc" id="L31">    }</span>
 
     public Long ejecutar(Cliente cliente) {
-<span class="fc" id="L33">        validarExistenciaPrevia(cliente);</span>
-<span class="fc" id="L34">        validarMayorEdad(cliente);</span>
-<span class="fc" id="L35">        calcularPrecioEntrada(cliente);</span>
-<span class="fc" id="L36">        return this.repositorioCliente.crear(cliente);</span>
+<span class="nc" id="L34">        validarExistenciaPrevia(cliente);</span>
+<span class="nc" id="L35">        validarMayorEdad(cliente);</span>
+<span class="nc" id="L36">        calcularPrecioEntrada(cliente);</span>
+<span class="nc" id="L37">        return this.repositorioCliente.crear(cliente);</span>
     }
 
     private void validarExistenciaPrevia(Cliente cliente) {
-<span class="fc" id="L40">        boolean existe = this.repositorioCliente.existe(cliente.getCedula());</span>
-<span class="fc bfc" id="L41" title="All 2 branches covered.">        if(existe) {</span>
-<span class="fc" id="L42">            throw new ExcepcionDuplicidad(EL_CLIENTE_YA_EXISTE_EN_EL_SISTEMA);</span>
+<span class="nc" id="L41">        boolean existe = this.repositorioCliente.existe(cliente.getCedula());</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        if(existe) {</span>
+<span class="nc" id="L43">            throw new ExcepcionDuplicidad(EL_CLIENTE_YA_EXISTE_EN_EL_SISTEMA);</span>
         }
-<span class="fc" id="L44">    }</span>
+<span class="nc" id="L45">    }</span>
 
     private void validarMayorEdad(Cliente cliente){
-<span class="fc" id="L47">        boolean mayor = true;</span>
+<span class="nc" id="L48">        boolean mayor = true;</span>
         //Se instancia una variable LocalDate para usar el relacionarlo con Period y asi encontrar su edad
         // exacta restando la actual con la de nacimiento
-<span class="fc" id="L50">        LocalDate fechaConLocalDate = LocalDate.of(cliente.getFechaNacimiento().getYear(),</span>
-<span class="fc" id="L51">                                                    cliente.getFechaNacimiento().getMonth(),</span>
-<span class="fc" id="L52">                                                    cliente.getFechaNacimiento().getDayOfMonth());</span>
+<span class="nc" id="L51">        LocalDate fechaConLocalDate = LocalDate.of(cliente.getFechaNacimiento().getYear(),</span>
+<span class="nc" id="L52">                                                    cliente.getFechaNacimiento().getMonth(),</span>
+<span class="nc" id="L53">                                                    cliente.getFechaNacimiento().getDayOfMonth());</span>
         //Se instancia una variable para comparar las dos fechas y asi hallar el tiempo en aÃ±os, meses y dias del Cliente
-<span class="fc" id="L54">        Period edadCliente = Period.between(fechaConLocalDate,LocalDate.now());</span>
-<span class="pc bpc" id="L55" title="1 of 2 branches missed.">        if(edadCliente.getYears() &gt;= NUMERO_MAYOR_EDAD){</span>
-<span class="fc" id="L56">            mayor =false;</span>
+<span class="nc" id="L55">        Period edadCliente = Period.between(fechaConLocalDate,LocalDate.now());</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        if(edadCliente.getYears() &gt;= NUMERO_MAYOR_EDAD){</span>
+<span class="nc" id="L57">            mayor =false;</span>
         }
-<span class="pc bpc" id="L58" title="1 of 2 branches missed.">        if (mayor){</span>
-<span class="nc" id="L59">            throw new ExcepcionDuplicidad(EL_CLIENTE_ES_MENOR_DE_EDAD);</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        if (mayor){</span>
+<span class="nc" id="L60">            throw new ExcepcionMayorEdad(EL_CLIENTE_ES_MENOR_DE_EDAD);</span>
         }
-<span class="fc" id="L61">    }</span>
+<span class="nc" id="L62">    }</span>
 
     private void calcularPrecioEntrada(Cliente cliente) {
         //El metodo nos ayuda a mirar si es hombre vale una cifra, si es mujer otra sifra
-<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if(cliente.getGenero().equals(HOMBRE)){</span>
-<span class="nc" id="L66">            cliente.setPrecioEntrada(PRECIO_ENTRADA_HOMBRE);</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        if(cliente.getGenero().equals(HOMBRE)){</span>
+<span class="nc" id="L67">            cliente.setPrecioEntrada(PRECIO_ENTRADA_HOMBRE);</span>
         } else {
-<span class="pc bpc" id="L68" title="1 of 2 branches missed.">            if (cliente.getGenero().equals(MUJER)){</span>
-<span class="fc" id="L69">                cliente.setPrecioEntrada(PRECIO_ENTRADA_MUJER);</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">            if (cliente.getGenero().equals(MUJER)){</span>
+<span class="nc" id="L70">                cliente.setPrecioEntrada(PRECIO_ENTRADA_MUJER);</span>
             }
         }
         //Miranmos la fecha del dia de hoy y si es sabado o domingo se sube un 5%
         //LocalDate f = LocalDate.of(2000,1,1);
-<span class="pc bpc" id="L74" title="1 of 2 branches missed.">        if (String.valueOf(LocalDate.now().getDayOfWeek()) == SABADO ||</span>
-<span class="pc bpc" id="L75" title="1 of 2 branches missed.">                String.valueOf(LocalDate.now().getDayOfWeek()) == DOMINGO) {</span>
-<span class="nc" id="L76">            cliente.setPrecioEntrada(cliente.getPrecioEntrada() + (cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO));</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">        if (String.valueOf(LocalDate.now().getDayOfWeek()) == SABADO ||</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">                String.valueOf(LocalDate.now().getDayOfWeek()) == DOMINGO) {</span>
+<span class="nc" id="L77">            cliente.setPrecioEntrada(cliente.getPrecioEntrada() + (cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO));</span>
         }
-<span class="pc bpc" id="L78" title="1 of 2 branches missed.">        if (cumpleaÃ±osCliente(cliente)){</span>
-<span class="nc" id="L79">            cliente.setPrecioEntrada(0d);</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">        if (cumpleaÃ±osCliente(cliente)){</span>
+<span class="nc" id="L80">            cliente.setPrecioEntrada(0d);</span>
         }
-<span class="fc" id="L81">    }</span>
+<span class="nc" id="L82">    }</span>
 
     private boolean cumpleaÃ±osCliente(Cliente cliente) {
-<span class="pc bpc" id="L84" title="1 of 2 branches missed.">        return (cliente.getFechaNacimiento().getMonth() == LocalDate.now().getMonth() &amp;&amp;</span>
-<span class="pc bnc" id="L85" title="All 2 branches missed.">                cliente.getFechaNacimiento().getDayOfMonth() == LocalDate.now().getDayOfMonth());</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">        return (cliente.getFechaNacimiento().getMonth() == LocalDate.now().getMonth() &amp;&amp;</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">                cliente.getFechaNacimiento().getDayOfMonth() == LocalDate.now().getDayOfMonth());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

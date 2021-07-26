@@ -14,6 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -21,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(ComandoControladorCliente.class)
 public class ComandoControladorClienteTest {
 
-    public static final String direccion = "/clientes";
+    private static final String direccion = "/clientes";
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -30,19 +32,34 @@ public class ComandoControladorClienteTest {
     private MockMvc mocMvc;
 
     /**
-     * Prueba que el servicio de delete funcione
+     * Prueba que el servicio de DELETE funcione correctamente
      */
     @Test
     public void validarEliminacionCliente() throws Exception {
         // Arrange
-        //ComandoCliente cliente = new ComandoClienteTestDataBuilder().build();
         Long id = 2L;
         // Act
-        mocMvc.perform(delete("/clientes/{id}", id)
+        mocMvc.perform(delete(direccion.concat("/{id}"), id)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 // Assert
                 .andExpect(status().isOk());
+    }
+
+    /**
+     * Prueba que el servicio POST funcione correctamente
+     */
+    @Test
+    public void validaringresarCliente() throws Exception{
+        // arrange
+        ComandoCliente cliente = new ComandoClienteTestDataBuilder().build();
+
+        // act - assert
+        mocMvc.perform(post("/clientes")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(cliente)))
+                .andExpect(status().isOk())
+                .andExpect(content().json("{'valor': 2}"));
     }
 
 }

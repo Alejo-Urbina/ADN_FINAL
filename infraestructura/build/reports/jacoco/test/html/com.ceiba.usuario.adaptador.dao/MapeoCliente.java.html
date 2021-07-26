@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 <span class="nc" id="L18">        String cedula = resultSet.getString(&quot;cedula&quot;);</span>
 <span class="nc" id="L19">        String genero = resultSet.getString(&quot;genero&quot;);</span>
 <span class="nc" id="L20">        Double precioEntrada = resultSet.getDouble(&quot;precio_entrada&quot;);</span>
-<span class="nc" id="L21">        LocalDateTime fecha = extraerLocalDateTime(resultSet, &quot;fecha_nacimiento&quot;);</span>
+<span class="nc" id="L21">        LocalDate fecha = extraerLocalDate(resultSet, &quot;fecha_nacimiento&quot;);</span>
 
 <span class="nc" id="L23">        return new DtoCliente(id,nombre,cedula, genero, precioEntrada,fecha);</span>
     }

@@ -1,5 +1,6 @@
 package com.ceiba.usuario.servicio;
 
+import com.ceiba.dominio.excepcion.ExcepcionMayorEdad;
 import com.ceiba.usuario.modelo.entidad.Cliente;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
@@ -56,7 +57,7 @@ public class ServicioIngresarCliente {
             mayor =false;
         }
         if (mayor){
-            throw new ExcepcionDuplicidad(EL_CLIENTE_ES_MENOR_DE_EDAD);
+            throw new ExcepcionMayorEdad(EL_CLIENTE_ES_MENOR_DE_EDAD);
         }
     }
 

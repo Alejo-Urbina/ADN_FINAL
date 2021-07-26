@@ -18,7 +18,7 @@ public class ClienteTestBuilder {
         this.cedula = "1090515821";
         this.genero = "M";
         this.precioEntrada = 0d;
-        this.fechaNacimiento = LocalDate.now();
+        this.fechaNacimiento = LocalDate.of(2000,05,03);
     }
 
     public Long getId() {

@@ -10,11 +10,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.core.Is.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -28,20 +26,16 @@ public class ConsultaControladorClienteTest {
     private MockMvc mocMvc;
 
     /**
-     * Prueba el correcto funcionamiento del lista de solicitudes
+     * Prueba el correcto funcionamiento del GET para listar los clientes
      * */
     @Test
     public void validarListadoClientes() throws Exception {
         // Arrange - Act
         mocMvc.perform(get("/clientes")
                 .contentType(MediaType.APPLICATION_JSON))
-                // Assert
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", not(empty())))
-                .andExpect(jsonPath("$[*].nombre", hasItem("Alejandro")))
-                .andExpect(jsonPath("$[*].cedula", hasItem("123")))
-                .andExpect(jsonPath("$[*].genero", hasItem("M")))
-                .andExpect(jsonPath("$[*].precio_entrada", hasItem(0d)))
-                .andExpect(jsonPath("$[*].fecha_nacimiento", hasItem(LocalDate.of(2021,7,23))));
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$[0].nombre", is("Giovy")));
     }
+
 }

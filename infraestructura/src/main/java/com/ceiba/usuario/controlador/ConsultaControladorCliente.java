@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/clientes")
-@Api(tags={"Controlador consulta cliente"})
+@Api(tags={"Controlador consulta clientes"})
 public class ConsultaControladorCliente {
 
     private final ManejadorListarClientes manejadorListarClientes;

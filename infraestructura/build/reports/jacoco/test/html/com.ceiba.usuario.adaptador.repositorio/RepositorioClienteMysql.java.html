@@ -3,7 +3,6 @@
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.usuario.modelo.entidad.Cliente;
-import com.ceiba.usuario.modelo.entidad.Usuario;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
@@ -21,29 +20,29 @@ public class RepositorioClienteMysql implements RepositorioCliente {
     @SqlStatement(namespace=&quot;cliente&quot;, value=&quot;existe&quot;)
     private static String sqlExiste;
 
-<span class="fc" id="L24">    public RepositorioClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
-<span class="fc" id="L25">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
-<span class="fc" id="L26">    }</span>
+<span class="fc" id="L23">    public RepositorioClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L24">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L25">    }</span>
 
     @Override
     public Long crear(Cliente cliente) {
-<span class="nc" id="L30">        return this.customNamedParameterJdbcTemplate.crear(cliente, sqlCrear);</span>
+<span class="nc" id="L29">        return this.customNamedParameterJdbcTemplate.crear(cliente, sqlCrear);</span>
     }
 
     @Override
     public void eliminar(Long id) {
-<span class="nc" id="L35">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L36">        paramSource.addValue(&quot;id&quot;, id);</span>
+<span class="nc" id="L34">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L35">        paramSource.addValue(&quot;id&quot;, id);</span>
 
-<span class="nc" id="L38">        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);</span>
-<span class="nc" id="L39">    }</span>
+<span class="nc" id="L37">        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);</span>
+<span class="nc" id="L38">    }</span>
 
     @Override
     public boolean existe(String cedula) {
-<span class="nc" id="L43">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
-<span class="nc" id="L44">        paramSource.addValue(&quot;cedula&quot;, cedula);</span>
+<span class="nc" id="L42">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L43">        paramSource.addValue(&quot;cedula&quot;, cedula);</span>
 
-<span class="nc" id="L46">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);</span>
+<span class="nc" id="L45">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

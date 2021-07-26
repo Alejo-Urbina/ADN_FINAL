@@ -2,7 +2,6 @@
 
 
 import com.ceiba.usuario.modelo.dto.DtoCliente;
-import com.ceiba.usuario.modelo.dto.DtoUsuario;
 import com.ceiba.usuario.puerto.dao.DaoCliente;
 import org.springframework.stereotype.Component;
 
@@ -13,10 +12,10 @@ public class ManejadorListarClientes {
 
     private final DaoCliente daoCliente;
 
-<span class="fc" id="L16">    public ManejadorListarClientes(DaoCliente daoCliente){</span>
-<span class="fc" id="L17">        this.daoCliente = daoCliente;</span>
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L15">    public ManejadorListarClientes(DaoCliente daoCliente){</span>
+<span class="fc" id="L16">        this.daoCliente = daoCliente;</span>
+<span class="fc" id="L17">    }</span>
 
-<span class="nc" id="L20">    public List&lt;DtoCliente&gt; ejecutar(){ return this.daoCliente.listar(); }</span>
+<span class="nc" id="L19">    public List&lt;DtoCliente&gt; ejecutar(){ return this.daoCliente.listar(); }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

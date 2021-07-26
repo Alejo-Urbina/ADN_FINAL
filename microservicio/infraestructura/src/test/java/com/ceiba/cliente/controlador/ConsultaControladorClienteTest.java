@@ -11,7 +11,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.hamcrest.Matchers.hasSize;
+import java.time.LocalDate;
+
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.Is.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -34,8 +36,9 @@ public class ConsultaControladorClienteTest {
         mocMvc.perform(get("/clientes")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].nombre", is("Giovy")));
+                .andExpect(jsonPath("$", not(empty())))
+                .andExpect(jsonPath("$[0].nombre", is("Giovy")))
+                .andExpect(jsonPath("$[0].cedula", is("998877")))
+                .andExpect(jsonPath("$[0].genero", is("H")));
     }
-
 }

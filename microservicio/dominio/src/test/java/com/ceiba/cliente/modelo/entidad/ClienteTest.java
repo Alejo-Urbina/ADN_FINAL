@@ -2,9 +2,12 @@ package com.ceiba.cliente.modelo.entidad;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.cliente.builder.ClienteTestBuilder;
+import com.ceiba.dominio.excepcion.ExcepcionMayorEdad;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.time.LocalDate;
 
 public class ClienteTest {
 
@@ -12,6 +15,7 @@ public class ClienteTest {
     private static final String SE_DEBE_INGRESAR_LA_CEDULA = "Se debe ingresar la cedula del cliente";
     private static final String SE_DEBE_INGRESAR_EL_GENERO = "Se debe ingresar el genero del cliente";
     private static final String SE_DEBE_INGRESAR_LA_FECHA_DE_NACIMIENTO = "Se debe ingresar la fecha de nacimiento del cliente";
+    private static final String EL_CLIENTE_ES_MENOR_DE_EDAD = "El cliente es menor de edad";
 
     private ClienteTestBuilder clienteTestBuilder;
 
@@ -63,5 +67,16 @@ public class ClienteTest {
         clienteTestBuilder.setFechaNacimiento(null);
         // Act - Assert
         BasePrueba.assertThrows(clienteTestBuilder::build, ExcepcionValorObligatorio.class, SE_DEBE_INGRESAR_LA_FECHA_DE_NACIMIENTO);
+    }
+
+    /**
+     * Prueba que se arroja la excepcion  de digitar la fecha de nacimiento y no dejarla vacia
+     */
+    @Test
+    public void validarExcepcionMayorEdadTest() {
+        // Arrange
+        clienteTestBuilder.setFechaNacimiento(LocalDate.of(2010,2,15));
+        // Act - Assert
+        BasePrueba.assertThrows(clienteTestBuilder::build, ExcepcionMayorEdad.class, EL_CLIENTE_ES_MENOR_DE_EDAD);
     }
 }

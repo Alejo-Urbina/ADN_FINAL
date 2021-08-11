@@ -22,4 +22,11 @@ public interface RepositorioCliente {
      * @return si existe o no
      */
     boolean existe(String cedula);
+
+    /**
+     * Permite validar si existe un usuario con un nombre
+     * @param id
+     * @return si existe o no
+     */
+    boolean existeConId(Long id);
 }

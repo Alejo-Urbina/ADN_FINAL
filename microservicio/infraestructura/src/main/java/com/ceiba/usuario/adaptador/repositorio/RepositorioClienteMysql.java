@@ -20,6 +20,9 @@ public class RepositorioClienteMysql implements RepositorioCliente {
     @SqlStatement(namespace="cliente", value="existe")
     private static String sqlExiste;
 
+    @SqlStatement(namespace="cliente", value="existeConId")
+    private static String sqlExisteConId;
+
     public RepositorioClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
@@ -33,7 +36,6 @@ public class RepositorioClienteMysql implements RepositorioCliente {
     public void eliminar(Long id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("id", id);
-
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
 
@@ -41,7 +43,13 @@ public class RepositorioClienteMysql implements RepositorioCliente {
     public boolean existe(String cedula) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("cedula", cedula);
-
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);
+    }
+
+    @Override
+    public boolean existeConId(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteConId,paramSource, Boolean.class);
     }
 }

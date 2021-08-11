@@ -3,7 +3,6 @@ package com.ceiba.cliente.servicio;
 import com.ceiba.BasePrueba;
 import com.ceiba.cliente.builder.ClienteTestBuilder;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.dominio.excepcion.ExcepcionMayorEdad;
 import com.ceiba.usuario.modelo.entidad.Cliente;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.usuario.servicio.ServicioIngresarCliente;
@@ -62,23 +61,6 @@ public class ServicioCrearClienteTest {
     }
 
     /**
-     * Prueba que se arroje la excepcion de solo entrar mayores de edad
-     */
-    @Test
-    public void validarIngresoClienteMayorEdadTest() {
-        // Arrange
-        Cliente cliente = new ClienteTestBuilder()
-                .setCedula("445566")
-                .setGenero("M")
-                .setFechaNacimiento(LocalDate.of(2010,2,15))
-                .build();
-        when(repositorioCliente.existe(anyString())).thenReturn(false);
-        ServicioIngresarCliente servicioIngresarCliente = new ServicioIngresarCliente(repositorioCliente);
-        // Act - Assert
-        BasePrueba.assertThrows(() -> servicioIngresarCliente.ejecutar(cliente), ExcepcionMayorEdad.class, "El cliente es menor de edad");
-    }
-
-    /**
      * Prueba el caso de que entre alguien que este cumpliendo años
      */
     @Test
@@ -94,43 +76,73 @@ public class ServicioCrearClienteTest {
     }
 
     /**
-     * Prueba el calculo del precio de una mujer al ingresar a la discoteca y si es fin de semana cobrar el 5% mas
+     * Prueba el calculo del precio de una mujer al ingresar a la discoteca un dia entre semana
      */
     @Test
-    public void validarPrecioClienteMujerTest() {
+    public void validarPrecioClienteMujerDiaNormalTest() {
         // Arrange
         Cliente cliente = new ClienteTestBuilder().build();
         cliente.setFechaNacimiento(LocalDate.of(2000,01,01));
         cliente.setGenero("M");
         ServicioIngresarCliente servicioIngresarCliente = new ServicioIngresarCliente(repositorioCliente);
+        cliente.setFechaActual(LocalDate.of(LocalDate.now().getYear(),01,05));
         // Act
         servicioIngresarCliente.ejecutar(cliente);
         // Assert
-        if (LocalDate.now().getDayOfWeek().toString() == "SATURDAY" || LocalDate.now().getDayOfWeek().toString() == "SUNDAY"){
-            assertTrue(cliente.getPrecioEntrada() == 10500);
-        } else {
-            assertTrue(cliente.getPrecioEntrada() == 10000);
-        }
+        assertTrue(cliente.getPrecioEntrada() == 10000);
+
     }
 
     /**
-     * Prueba el calculo del precio de un hombre al ingresar a la discoteca y si es fin de semana cobrar el 5% mas
+     * Prueba el calculo del precio de una mujer al ingresar a la discoteca sea sabado o domingo cobrarle el 5% mas
      */
     @Test
-    public void validarPrecioClienteHombreTest() {
+    public void validarPrecioClienteMujerSabadoODomingoTest() {
         // Arrange
         Cliente cliente = new ClienteTestBuilder().build();
-        cliente.setFechaNacimiento(LocalDate.of(2000,01,02));
+        cliente.setFechaNacimiento(LocalDate.of(2000,01,01));
+        cliente.setGenero("M");
+        ServicioIngresarCliente servicioIngresarCliente = new ServicioIngresarCliente(repositorioCliente);
+        cliente.setFechaActual(LocalDate.of(LocalDate.now().getYear(),01,02));
+        // Act
+        servicioIngresarCliente.ejecutar(cliente);
+        // Assert
+        assertTrue(cliente.getPrecioEntrada() == 10500);
+
+    }
+
+    /**
+     * Prueba el calculo del precio de un hombre al ingresar a la discoteca un dia entre semana
+     */
+    @Test
+    public void validarPrecioClienteHombreDiaNormalTest() {
+        // Arrange
+        Cliente cliente = new ClienteTestBuilder().build();
+        cliente.setFechaNacimiento(LocalDate.of(2000,01,01));
         cliente.setGenero("H");
+        ServicioIngresarCliente servicioIngresarCliente = new ServicioIngresarCliente(repositorioCliente);
+        cliente.setFechaActual(LocalDate.of(LocalDate.now().getYear(),01,06));
+        // Act
+        servicioIngresarCliente.ejecutar(cliente);
+        // Assert
+        assertTrue(cliente.getPrecioEntrada() == 15000);
+    }
+
+    /**
+     * Prueba el calculo del precio de un hombre al ingresar a la discoteca sea sabado o domingo cobrarle el 5% mas
+     */
+    @Test
+    public void validarPrecioClienteHombreSabadoODomingoTest() {
+        // Arrange
+        Cliente cliente = new ClienteTestBuilder().build();
+        cliente.setFechaNacimiento(LocalDate.of(2000,01,01));
+        cliente.setGenero("H");
+        cliente.setFechaActual(LocalDate.of(LocalDate.now().getYear(),01,02));
         ServicioIngresarCliente servicioIngresarCliente = new ServicioIngresarCliente(repositorioCliente);
         // Act
         servicioIngresarCliente.ejecutar(cliente);
         // Assert
-        if (LocalDate.now().getDayOfWeek().toString() == "SATURDAY" || LocalDate.now().getDayOfWeek().toString() == "SUNDAY"){
-            assertTrue(cliente.getPrecioEntrada() == 15750);
-        } else {
-            assertTrue(cliente.getPrecioEntrada() == 15000);
-        }
+        assertTrue(cliente.getPrecioEntrada() == 15750);
     }
 
 }

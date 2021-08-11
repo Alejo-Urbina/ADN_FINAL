@@ -38,7 +38,7 @@ public class ComandoControladorClienteTest {
     @Test
     public void validarEliminacionCliente() throws Exception {
         // Arrange
-        Long id = 2L;
+        Long id = 1L;
         // Act
         mocMvc.perform(delete(direccion.concat("/{id}"), id)
                 .contentType(MediaType.APPLICATION_JSON)

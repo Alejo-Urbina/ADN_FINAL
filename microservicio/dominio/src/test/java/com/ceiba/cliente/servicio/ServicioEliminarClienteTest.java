@@ -1,9 +1,17 @@
 package com.ceiba.cliente.servicio;
 
+import com.ceiba.BasePrueba;
+import com.ceiba.cliente.builder.ClienteTestBuilder;
+import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
+import com.ceiba.usuario.modelo.entidad.Cliente;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.usuario.servicio.ServicioEliminarCliente;
+import com.ceiba.usuario.servicio.ServicioIngresarCliente;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
+
+import java.time.LocalDate;
 
 import static org.mockito.Mockito.*;
 
@@ -17,16 +25,16 @@ public class ServicioEliminarClienteTest {
     }
 
     /**
-     * Prueba que valida que se implemente el método eliminar del repositorio
+     * Prueba que no exista un cliente con la misma cedula
      */
     @Test
-    public void validarEliminarClienteTest() {
+    public void validarNoExistenciaClientelTest() {
         // Arrange
+        RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
+        Mockito.when(repositorioCliente.existeConId(Mockito.anyLong())).thenReturn(false);
         ServicioEliminarCliente servicioEliminarCliente = new ServicioEliminarCliente(repositorioCliente);
-        // Act
-        servicioEliminarCliente.ejecutar(anyLong());
-        // Assert
-        verify(repositorioCliente).eliminar(anyLong());
+        // act - assert
+        BasePrueba.assertThrows(() -> servicioEliminarCliente.ejecutar(1L), ExcepcionDuplicidad.class,"El cliente no existe en el sistema");
     }
 
 }

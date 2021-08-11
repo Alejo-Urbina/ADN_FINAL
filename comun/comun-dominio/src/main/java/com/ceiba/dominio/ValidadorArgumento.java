@@ -2,6 +2,7 @@ package com.ceiba.dominio;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -10,25 +11,27 @@ import java.util.regex.Pattern;
 
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
+import com.ceiba.dominio.excepcion.ExcepcionMayorEdad;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 
 public class ValidadorArgumento {
-	
-	private ValidadorArgumento() {}
+
+    public ValidadorArgumento() {
+    }
 
     public static void validarObligatorio(Object valor, String mensaje) {
-        if (valor == null) {
+        if (valor == null || valor.equals("")) {
             throw new ExcepcionValorObligatorio(mensaje);
         }
     }
-    
-    public static void validarLongitud(String valor,int longitud,String mensaje){
-        if(valor.length() < longitud){
+
+    public static void validarLongitud(String valor, int longitud, String mensaje) {
+        if (valor.length() < longitud) {
             throw new ExcepcionLongitudValor(mensaje);
         }
     }
-    
+
     public static <T> void validarNoVacio(List<T> lista, String mensaje) {
         if (lista.isEmpty()) {
             throw new ExcepcionValorObligatorio(mensaje);
@@ -76,7 +79,7 @@ public class ValidadorArgumento {
 
     public static <E extends Enum<E>> E validarValido(String valor, Class<E> enumAObtener, String mensaje) {
         E enumObtenido = null;
-        if(null != valor) {
+        if (null != valor) {
             Optional<E> resultadoOpcional = Arrays.stream(enumAObtener.getEnumConstants())
                     .filter(resultado -> resultado.toString().equals(valor)).findFirst();
 
@@ -89,11 +92,28 @@ public class ValidadorArgumento {
         return enumObtenido;
     }
 
-    public static void validarNumerico(String valor,String mensaje) {
+    public static void validarNumerico(String valor, String mensaje) {
         try {
             Long.parseLong(valor);
         } catch (NumberFormatException numberFormatException) {
             throw new ExcepcionValorInvalido(mensaje);
         }
     }
+
+    public static boolean validarMayorEdad(LocalDate fechaCliente, String mensaje) {
+        boolean mayor = true;
+        LocalDate fechaConLocalDate = LocalDate.of(fechaCliente.getYear(),
+                fechaCliente.getMonth(),
+                fechaCliente.getDayOfMonth());
+        Period edadCliente = Period.between(fechaConLocalDate, LocalDate.now());
+        int NUMERO_MAYOR_EDAD = 18;
+        if (edadCliente.getYears() >= NUMERO_MAYOR_EDAD) {
+            mayor = false;
+        }
+        if (mayor) {
+            throw new ExcepcionMayorEdad(mensaje);
+        }
+        return mayor;
+    }
 }
+

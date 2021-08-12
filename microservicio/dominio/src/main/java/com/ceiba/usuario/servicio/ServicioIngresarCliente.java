@@ -45,8 +45,8 @@ public class ServicioIngresarCliente {
             }
         }
         //Miranmos la fecha del dia de hoy y si es sabado o domingo se sube un 5%
-        if (String.valueOf(cliente.fechaActual.getDayOfWeek()) == DiaFinDeSemana.SATURDAY.toString() ||
-                String.valueOf(cliente.fechaActual.getDayOfWeek()) == DiaFinDeSemana.SUNDAY.toString()) {
+        if (String.valueOf(cliente.fechaActual.getDayOfWeek()).equals(DiaFinDeSemana.SATURDAY.toString()) ||
+                String.valueOf(cliente.fechaActual.getDayOfWeek()).equals(DiaFinDeSemana.SUNDAY.toString())) {
             cliente.setPrecioEntrada(cliente.getPrecioEntrada() + (cliente.getPrecioEntrada() * TASA_AUMENTO_SADADO_O_DOMINGO));
         }
         if (cumpleanosCliente(cliente)){

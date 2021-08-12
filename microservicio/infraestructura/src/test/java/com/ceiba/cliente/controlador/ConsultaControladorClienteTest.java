@@ -38,5 +38,15 @@ public class ConsultaControladorClienteTest {
                 .andExpect(jsonPath("$[0].nombre", is("Giovy")))
                 .andExpect(jsonPath("$[0].cedula", is("998877")))
                 .andExpect(jsonPath("$[0].genero", is("H")));
+        mocMvc.perform(get("/clientes")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", not(1L)))
+                .andExpect(jsonPath("$[0].nombre", is("Giovy")))
+                .andExpect(jsonPath("$[0].cedula", is("998877")))
+                .andExpect(jsonPath("$[0].genero", is("H")));
+
     }
+
+
 }

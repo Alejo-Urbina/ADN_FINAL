@@ -2,6 +2,8 @@ package com.ceiba.usuario.modelo.entidad;
 
 
 import com.ceiba.dominio.ValidadorArgumento;
+import com.ceiba.usuario.constante.DiaFinDeSemana;
+import com.ceiba.usuario.constante.TipoGenero;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,14 +37,43 @@ public class Cliente {
         ValidadorArgumento.validarObligatorio(fechaNacimiento, SE_DEBE_INGRESAR_LA_FECHA_DE_NACIMIENTO);
         ValidadorArgumento.validarMayorEdad(fechaNacimiento,EL_CLIENTE_ES_MENOR_DE_EDAD);
 
-
         this.id = id;
         this.nombre = nombre;
         this.cedula = cedula;
         this.genero = genero;
         this.precioEntrada = precioEntrada;
         this.fechaNacimiento = fechaNacimiento;
-        fechaActual = LocalDate.now();
+        this.fechaActual = LocalDate.now();
+    }
+
+    public void calcularPrecioEntrada() {
+        calcularPrecioPorGenero();
+        sumarleSiEsSabadoODomingo();
+        cumpleanosCliente();
+    }
+
+    private void calcularPrecioPorGenero(){
+        if(this.genero.equals(TipoGenero.H.toString())){
+            this.precioEntrada = PRECIO_ENTRADA_HOMBRE;
+        } else {
+            if (this.genero.equals(TipoGenero.M.toString())){
+                this.precioEntrada = PRECIO_ENTRADA_MUJER;
+            }
+        }
+    }
+
+    private void sumarleSiEsSabadoODomingo(){
+        if (String.valueOf(this.fechaActual.getDayOfWeek()).equals(DiaFinDeSemana.SATURDAY.toString()) ||
+                String.valueOf(this.fechaActual.getDayOfWeek()).equals(DiaFinDeSemana.SUNDAY.toString())) {
+            this.precioEntrada = (this.precioEntrada + (this.precioEntrada * TASA_AUMENTO_SADADO_O_DOMINGO));
+        }
+    }
+
+    private void cumpleanosCliente() {
+        if (this.fechaNacimiento.getMonth() == this.fechaActual.getMonth() &&
+                this.fechaNacimiento.getDayOfMonth() == this.fechaActual.getDayOfMonth()){
+            this.precioEntrada = 0d;
+        }
     }
 
 }

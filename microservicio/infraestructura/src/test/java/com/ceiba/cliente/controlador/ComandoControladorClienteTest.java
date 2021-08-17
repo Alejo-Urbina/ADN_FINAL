@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes= ApplicationMock.class)
+@ContextConfiguration(classes = ApplicationMock.class)
 @WebMvcTest(ComandoControladorCliente.class)
 public class ComandoControladorClienteTest {
 
@@ -51,7 +51,7 @@ public class ComandoControladorClienteTest {
      * Prueba que el servicio POST funcione correctamente
      */
     @Test
-    public void validaringresarCliente() throws Exception{
+    public void validaringresarCliente() throws Exception {
         // arrange
         ComandoCliente cliente = new ComandoClienteTestDataBuilder().build();
 
@@ -62,5 +62,4 @@ public class ComandoControladorClienteTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 2}"));
     }
-
 }

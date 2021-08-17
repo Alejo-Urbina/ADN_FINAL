@@ -12,13 +12,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.core.Is.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes= ApplicationMock.class)
+@ContextConfiguration(classes = ApplicationMock.class)
 @WebMvcTest(ConsultaControladorCliente.class)
 public class ConsultaControladorClienteTest {
 
@@ -27,10 +26,13 @@ public class ConsultaControladorClienteTest {
 
     /**
      * Prueba el correcto funcionamiento del GET para listar los clientes
-     * */
+     */
     @Test
     public void validarListadoClientes() throws Exception {
         // Arrange - Act
-
+        mocMvc.perform(get("/clientes")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(1)));
     }
 }

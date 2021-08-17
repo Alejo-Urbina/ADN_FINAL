@@ -28,7 +28,7 @@ public class ServicioEliminarClienteTest {
      * Prueba que no exista un cliente con la misma cedula
      */
     @Test
-    public void validarNoExistenciaClientelTest() {
+    public void validarNoExistenciaClienteTest() {
         // Arrange
         RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
         Mockito.when(repositorioCliente.existeConId(Mockito.anyLong())).thenReturn(false);

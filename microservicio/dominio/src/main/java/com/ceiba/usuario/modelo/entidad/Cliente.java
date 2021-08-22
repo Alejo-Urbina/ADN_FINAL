@@ -30,7 +30,7 @@ public class Cliente {
     private LocalDate fechaNacimiento;
     public LocalDate fechaActual;
 
-    public Cliente(Long id,String nombre, String cedula, String genero, Double precioEntrada, LocalDate fechaNacimiento) {
+    public Cliente(Long id,String nombre, String cedula, String genero, LocalDate fechaNacimiento) {
         ValidadorArgumento.validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_CLIENTE);
         ValidadorArgumento.validarObligatorio(cedula, SE_DEBE_INGRESAR_LA_CEDULA);
         ValidadorArgumento.validarObligatorio(genero, SE_DEBE_INGRESAR_EL_GENERO);
@@ -41,7 +41,6 @@ public class Cliente {
         this.nombre = nombre;
         this.cedula = cedula;
         this.genero = genero;
-        this.precioEntrada = precioEntrada;
         this.fechaNacimiento = fechaNacimiento;
         this.fechaActual = LocalDate.now();
     }

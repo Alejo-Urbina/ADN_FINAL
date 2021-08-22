@@ -2,6 +2,7 @@ package com.ceiba.infraestructura.jdbc;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Objects;
 
 import com.ceiba.infraestructura.excepcion.ExcepcionTecnica;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -19,6 +20,14 @@ public class CustomNamedParameterJdbcTemplate {
 	
 	public CustomNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
+	}
+
+	public Long validarNulo(Number object){
+		if (Objects.isNull(object)) {
+			throw new NullPointerException();
+		} else {
+			return object.longValue();
+		}
 	}
 	
 	public Long crear(Object object,String sql) {

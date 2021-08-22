@@ -14,7 +14,6 @@ public class FabricaCliente {
                 comandoCliente.getNombre(),
                 comandoCliente.getCedula(),
                 comandoCliente.getGenero(),
-                comandoCliente.getPrecioEntrada(),
                 comandoCliente.getFechaNacimiento()
         );
     }

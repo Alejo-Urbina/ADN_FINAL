@@ -1,10 +1,3 @@
-create table usuario (
- id int(11) not null auto_increment,
- nombre varchar(100) not null,
- clave varchar(45) not null,
- fecha_creacion datetime null,
- primary key (id)
-);
 
 create table cliente (
  id int(50) not null auto_increment,
@@ -13,5 +6,14 @@ create table cliente (
  genero varchar(20) not null,
  precio_entrada float(5),
  fecha_nacimiento datetime not null,
+ primary key (id)
+);
+
+create table voleto (
+ id int(50) not null auto_increment,
+ precio_entrada float(5),
+ fecha_ingreso datetime not null,
+ id_cliente varchar(8) not null,
+ foreign key (id_cliente) REFERENCES cliente (id),
  primary key (id)
 );

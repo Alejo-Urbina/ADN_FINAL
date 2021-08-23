@@ -5,7 +5,6 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 
 
-
 public class ServicioIngresarCliente {
 
     private static final String EL_CLIENTE_YA_EXISTE_EN_EL_SISTEMA = "El cliente ya existe en el sistema";
@@ -19,7 +18,6 @@ public class ServicioIngresarCliente {
 
     public Long ejecutar(Cliente cliente) {
         validarExistenciaPrevia(cliente);
-        cliente.calcularPrecioEntrada();
         return this.repositorioCliente.crear(cliente);
     }
 

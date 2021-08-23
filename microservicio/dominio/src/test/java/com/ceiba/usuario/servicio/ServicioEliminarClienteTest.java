@@ -19,7 +19,7 @@ public class ServicioEliminarClienteTest {
     }
 
     /**
-     * Prueba que no exista un cliente con la misma cedula
+     * Prueba que no exista un cliente
      */
     @Test
     public void validarNoExistenciaClienteTest() {

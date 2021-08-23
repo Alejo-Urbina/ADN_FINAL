@@ -1,2 +1,2 @@
-select id,nombre,cedula, genero, precio_entrada, fecha_nacimiento
+select id,nombre,cedula, genero, fecha_nacimiento
 from cliente

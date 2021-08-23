@@ -26,7 +26,6 @@ public class Cliente {
     private String nombre;
     private String cedula;
     private String genero;
-    private Double precioEntrada;
     private LocalDate fechaNacimiento;
     public LocalDate fechaActual;
 
@@ -43,36 +42,6 @@ public class Cliente {
         this.genero = genero;
         this.fechaNacimiento = fechaNacimiento;
         this.fechaActual = LocalDate.now();
-    }
-
-    public void calcularPrecioEntrada() {
-        calcularPrecioPorGenero();
-        sumarleSiEsSabadoODomingo();
-        cumpleanosCliente();
-    }
-
-    private void calcularPrecioPorGenero(){
-        if(this.genero.equals(TipoGenero.H.toString())){
-            this.precioEntrada = PRECIO_ENTRADA_HOMBRE;
-        } else {
-            if (this.genero.equals(TipoGenero.M.toString())){
-                this.precioEntrada = PRECIO_ENTRADA_MUJER;
-            }
-        }
-    }
-
-    private void sumarleSiEsSabadoODomingo(){
-        if (String.valueOf(this.fechaActual.getDayOfWeek()).equals(DiaFinDeSemana.SATURDAY.toString()) ||
-                String.valueOf(this.fechaActual.getDayOfWeek()).equals(DiaFinDeSemana.SUNDAY.toString())) {
-            this.precioEntrada = (this.precioEntrada + (this.precioEntrada * TASA_AUMENTO_SADADO_O_DOMINGO));
-        }
-    }
-
-    private void cumpleanosCliente() {
-        if (this.fechaNacimiento.getMonth() == this.fechaActual.getMonth() &&
-                this.fechaNacimiento.getDayOfMonth() == this.fechaActual.getDayOfMonth()){
-            this.precioEntrada = 0d;
-        }
     }
 
 }

@@ -16,9 +16,8 @@ public class MapeoCliente implements RowMapper<DtoCliente>, MapperResult {
         String nombre = resultSet.getString("nombre");
         String cedula = resultSet.getString("cedula");
         String genero = resultSet.getString("genero");
-        Double precioEntrada = resultSet.getDouble("precio_entrada");
         LocalDate fecha = extraerLocalDate(resultSet, "fecha_nacimiento");
 
-        return new DtoCliente(id,nombre,cedula, genero, precioEntrada,fecha);
+        return new DtoCliente(id,nombre,cedula, genero, fecha);
     }
 }

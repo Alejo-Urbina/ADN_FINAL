@@ -9,14 +9,12 @@ public class ComandoClienteTestDataBuilder {
     private String nombre;
     private String cedula;
     private String genero;
-    private Double precioEntrada;
     private LocalDate fecha;
 
     public ComandoClienteTestDataBuilder() {
         nombre = "Emily Contreras";
         cedula = "45654";
         genero = "M";
-        precioEntrada = 0d;
         fecha = LocalDate.of(2000,8,2);
     }
 
@@ -27,11 +25,6 @@ public class ComandoClienteTestDataBuilder {
 
     public ComandoClienteTestDataBuilder setGenero(String genero) {
         this.genero = genero;
-        return this;
-    }
-
-    public ComandoClienteTestDataBuilder setPrecioEntrada(Double precioEntrada) {
-        this.precioEntrada = precioEntrada;
         return this;
     }
 
@@ -46,6 +39,6 @@ public class ComandoClienteTestDataBuilder {
     }
 
     public ComandoCliente build() {
-        return new ComandoCliente(id,nombre, cedula, genero, precioEntrada, fecha);
+        return new ComandoCliente(id,nombre, cedula, genero, fecha);
     }
 }

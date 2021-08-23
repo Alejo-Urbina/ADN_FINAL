@@ -5,10 +5,12 @@ import com.ceiba.usuario.constante.TipoGenero;
 import  com.ceiba.usuario.modelo.entidad.Cliente;
 import com.ceiba.voleto.constante.DiaFinDeSemana;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Getter
+@Setter
 public class Voleto {
 
     private Long id;
@@ -23,9 +25,9 @@ public class Voleto {
 
 
 
-    public Voleto(Long id,double precio, LocalDate fechaIngreso, Cliente cliente) {
+    public Voleto(Long id,double precioEntrada, LocalDate fechaIngreso, Cliente cliente) {
         this.id = id;
-        this.precioEntrada = precio;
+        this.precioEntrada = precioEntrada;
         this.fechaIngreso = fechaIngreso;
         this.cliente = cliente;
     }
@@ -54,8 +56,8 @@ public class Voleto {
     }
 
     private void cumpleanosCliente() {
-        if (this.cliente.getFechaNacimiento().getMonth() == this.fechaIngreso.getMonth() &&
-                this.cliente.getFechaNacimiento().getDayOfMonth() == this.fechaIngreso.getDayOfMonth()){
+        if (this.cliente.getFechaNacimiento().getMonth() == this.cliente.getFechaActual().getMonth() &&
+                this.cliente.getFechaNacimiento().getDayOfMonth() == this.cliente.getFechaActual().getDayOfMonth()){
             this.precioEntrada = PRECIO_ENTRADA_CUMPLEANERO;
         }
     }

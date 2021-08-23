@@ -16,6 +16,5 @@ public class ComandoCliente {
     private String nombre;
     private String cedula;
     private String genero;
-    private Double precioEntrada;
     private LocalDate fechaNacimiento;
 }

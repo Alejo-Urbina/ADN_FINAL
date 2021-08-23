@@ -18,14 +18,12 @@ public class ClienteDtoTest {
         String nombre = "Gustavo Iglesias";
         String cedula = "1005042912";
         String genero = "H";
-        Double precioEntrada = 0d;
         LocalDate fechaNacimiento = LocalDate.of(2000,06,11);
         // Act
-        DtoCliente cliente = new DtoCliente(id,nombre,cedula,genero,precioEntrada,fechaNacimiento);
+        DtoCliente cliente = new DtoCliente(id,nombre,cedula,genero,fechaNacimiento);
         // Assert
         assertTrue(id == cliente.getId() && nombre.equals(cliente.getNombre()) &&
                     cedula.equals(cliente.getCedula()) && genero.equals(cliente.getGenero()) &&
-                    precioEntrada == cliente.getPrecioEntrada() &&
                     fechaNacimiento.equals(cliente.getFechaNacimiento()));
     }
 }

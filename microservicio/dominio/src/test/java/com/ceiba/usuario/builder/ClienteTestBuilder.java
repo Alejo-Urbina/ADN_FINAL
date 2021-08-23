@@ -9,7 +9,6 @@ public class ClienteTestBuilder {
     private String nombre;
     private String cedula;
     private String genero;
-    private Double precioEntrada;
     private LocalDate fechaNacimiento;
 
     public ClienteTestBuilder() {
@@ -17,7 +16,6 @@ public class ClienteTestBuilder {
         this.nombre = "Giovy Urbina";
         this.cedula = "1090515821";
         this.genero = "M";
-        this.precioEntrada = 0d;
         this.fechaNacimiento = LocalDate.of(2000,05,03);
     }
 

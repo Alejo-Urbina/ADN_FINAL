@@ -14,11 +14,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/voletos")
 @Api(tags = {"Controlador consulta voletos"})
-public class ConsutaControladorVoleto {
+public class ConsultaControladorVoleto {
 
     private final ManejadorListarVoleto manejadorListarVoleto;
 
-    public ConsutaControladorVoleto(ManejadorListarVoleto manejadorListarVoleto) {
+    public ConsultaControladorVoleto(ManejadorListarVoleto manejadorListarVoleto) {
         this.manejadorListarVoleto = manejadorListarVoleto;
     }
 

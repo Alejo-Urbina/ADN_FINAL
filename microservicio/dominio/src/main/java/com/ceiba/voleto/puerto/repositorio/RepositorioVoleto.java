@@ -13,10 +13,19 @@ public interface RepositorioVoleto {
     Long crear(Voleto voleto);
 
     /**
+     * Permite eliminar un voleto
+     * @param id
+     * @return el id generado
+     */
+    void eliminar(Long id);
+
+    /**
      * Permite obtener un cliente con el id
      * @param id
      * @return el cliente
      */
     Cliente obtenerPorId(Long id);
+
+    boolean exiteConId(Long id);
 
 }

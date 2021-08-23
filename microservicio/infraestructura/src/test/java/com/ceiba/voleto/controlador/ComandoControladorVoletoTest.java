@@ -1,8 +1,8 @@
-package com.ceiba.usuario.controlador;
+package com.ceiba.voleto.controlador;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.usuario.builder.ComandoClienteTestDataBuilder;
-import com.ceiba.usuario.comando.ComandoCliente;
+import com.ceiba.voleto.builder.ComandoVoletoTestDataBuilder;
+import com.ceiba.voleto.comando.ComandoVoleto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,10 +20,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = ApplicationMock.class)
-@WebMvcTest(ComandoControladorCliente.class)
-public class ComandoControladorClienteTest {
+@WebMvcTest(ComandoControladorVoleto.class)
+public class ComandoControladorVoletoTest {
 
-    private static final String direccion = "/clientes";
+    private static final String direccion = "/voletos";
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -32,12 +32,30 @@ public class ComandoControladorClienteTest {
     private MockMvc mocMvc;
 
     /**
+     * Prueba que el servicio POST funcione correctamente
+     */
+    @Test
+    public void validarCrearVoleto() throws Exception {
+
+        // arrange
+        ComandoVoleto voleto = new ComandoVoletoTestDataBuilder().build();
+        System.out.println(voleto.getClienteId());
+
+        // act - assert
+        mocMvc.perform(post(direccion)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(voleto)))
+                .andExpect(status().isOk())
+                .andExpect(content().json("{'valor': 2}"));
+    }
+
+    /**
      * Prueba que el servicio de DELETE funcione correctamente
      */
     @Test
-    public void validarEliminacionCliente() throws Exception {
+    public void validarEliminacionVoleto() throws Exception {
         // Arrange
-        Long id = 2L;
+        Long id = 1L;
         // Act
         mocMvc.perform(delete(direccion.concat("/{id}"), id)
                 .contentType(MediaType.APPLICATION_JSON)
@@ -46,19 +64,4 @@ public class ComandoControladorClienteTest {
                 .andExpect(status().isOk());
     }
 
-    /**
-     * Prueba que el servicio POST funcione correctamente
-     */
-    @Test
-    public void validarIngresarCliente() throws Exception {
-        // arrange
-        ComandoCliente cliente = new ComandoClienteTestDataBuilder().build();
-
-        // act - assert
-        mocMvc.perform(post(direccion)
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(cliente)))
-                .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 3}"));
-    }
 }

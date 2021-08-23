@@ -19,8 +19,14 @@ public class RepositorioVoletoMysql implements RepositorioVoleto {
     @SqlStatement(namespace = "voleto", value = "crear")
     private static String sqlCrear;
 
+    @SqlStatement(namespace = "voleto", value = "eliminar")
+    private static String sqlEliminar;
+
     @SqlStatement(namespace = "cliente", value = "listarCliente")
     private static String sqlCliente;
+
+    @SqlStatement(namespace="cliente", value="existeConId")
+    private static String sqlExisteConId;
 
 
     public RepositorioVoletoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -40,7 +46,27 @@ public class RepositorioVoletoMysql implements RepositorioVoleto {
     }
 
     @Override
-    public Cliente obtenerPorId(Long id) {
-        return (Cliente) this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlCliente, new MapeoClienteObjeto()).get(0);
+    public void eliminar(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
+
+    @Override
+    public Cliente obtenerPorId(Long id) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("id", id);
+        if(exiteConId(id)){
+            return (Cliente) this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlCliente, parameterSource, new MapeoClienteObjeto());
+        }
+        return (Cliente) this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlCliente, parameterSource, new MapeoClienteObjeto());
+    }
+
+    @Override
+    public boolean exiteConId(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteConId,paramSource, Boolean.class);
+    }
+
 }

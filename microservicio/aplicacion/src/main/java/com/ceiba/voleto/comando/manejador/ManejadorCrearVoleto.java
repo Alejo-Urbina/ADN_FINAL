@@ -14,7 +14,6 @@ public class ManejadorCrearVoleto implements ManejadorComandoRespuesta<ComandoVo
     private final FabricaVoleto fabricaVoleto;
     private final ServicioCrearVoleto servicioCrearVoleto;
 
-
     public ManejadorCrearVoleto(FabricaVoleto fabricaVoleto, ServicioCrearVoleto servicioCrearVoleto) {
         this.fabricaVoleto = fabricaVoleto;
         this.servicioCrearVoleto = servicioCrearVoleto;

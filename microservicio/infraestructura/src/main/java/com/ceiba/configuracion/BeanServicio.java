@@ -5,6 +5,7 @@ import com.ceiba.usuario.servicio.ServicioEliminarCliente;
 import com.ceiba.usuario.servicio.ServicioIngresarCliente;
 import com.ceiba.voleto.puerto.repositorio.RepositorioVoleto;
 import com.ceiba.voleto.servicio.ServicioCrearVoleto;
+import com.ceiba.voleto.servicio.ServicioEliminarVoleto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,5 +25,10 @@ public class BeanServicio {
     @Bean
     public ServicioCrearVoleto servicioCrearVoleto(RepositorioVoleto repositorioVoleto){
         return new ServicioCrearVoleto(repositorioVoleto);
+    }
+
+    @Bean
+    public ServicioEliminarVoleto servicioEliminarVoleto(RepositorioVoleto repositorioVoleto) {
+        return new ServicioEliminarVoleto(repositorioVoleto);
     }
 }

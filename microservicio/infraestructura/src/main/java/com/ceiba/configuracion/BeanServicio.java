@@ -1,11 +1,11 @@
 package com.ceiba.configuracion;
 
-import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
-import com.ceiba.usuario.servicio.ServicioEliminarCliente;
-import com.ceiba.usuario.servicio.ServicioIngresarCliente;
-import com.ceiba.voleto.puerto.repositorio.RepositorioVoleto;
-import com.ceiba.voleto.servicio.ServicioCrearVoleto;
-import com.ceiba.voleto.servicio.ServicioEliminarVoleto;
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
+import com.ceiba.cliente.servicio.ServicioEliminarCliente;
+import com.ceiba.cliente.servicio.ServicioIngresarCliente;
+import com.ceiba.boleto.puerto.repositorio.RepositorioBoleto;
+import com.ceiba.boleto.servicio.ServicioCrearBoleto;
+import com.ceiba.boleto.servicio.ServicioEliminarBoleto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -23,12 +23,12 @@ public class BeanServicio {
     }
 
     @Bean
-    public ServicioCrearVoleto servicioCrearVoleto(RepositorioVoleto repositorioVoleto){
-        return new ServicioCrearVoleto(repositorioVoleto);
+    public ServicioCrearBoleto servicioCrearBoleto(RepositorioBoleto repositorioBoleto){
+        return new ServicioCrearBoleto(repositorioBoleto);
     }
 
     @Bean
-    public ServicioEliminarVoleto servicioEliminarVoleto(RepositorioVoleto repositorioVoleto) {
-        return new ServicioEliminarVoleto(repositorioVoleto);
+    public ServicioEliminarBoleto servicioEliminarBoleto(RepositorioBoleto repositorioBoleto) {
+        return new ServicioEliminarBoleto(repositorioBoleto);
     }
 }

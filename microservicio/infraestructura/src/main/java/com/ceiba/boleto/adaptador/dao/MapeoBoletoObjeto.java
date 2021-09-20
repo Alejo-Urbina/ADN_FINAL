@@ -23,6 +23,6 @@ public class MapeoBoletoObjeto implements RowMapper<Boleto>, MapperResult {
         double precioEntrada = resultSet.getDouble("precio_entrada");
         Long clienteId = resultSet.getLong("id_cliente");
         Cliente cliente = repositorioBoletoMysql.obtenerPorId(clienteId);
-        return new Boleto(id,precioEntrada,cliente);
+        return new Boleto(cliente);
     }
 }

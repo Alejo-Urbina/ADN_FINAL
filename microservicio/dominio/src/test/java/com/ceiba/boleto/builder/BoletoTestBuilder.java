@@ -37,7 +37,7 @@ public class BoletoTestBuilder {
         this.fechaIngreso = LocalDate.of(2000,5,5);
         this.precioEntrada = 10000d;
         this.cliente = new Cliente(1L,"Lewi","1090654789","M",LocalDate.of(2000,5,5));
-        return new Boleto(id, precioEntrada, cliente);
+        return new Boleto(cliente);
     }
 
 }

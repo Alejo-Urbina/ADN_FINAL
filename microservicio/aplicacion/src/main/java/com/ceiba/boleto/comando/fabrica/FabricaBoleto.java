@@ -18,8 +18,6 @@ public class FabricaBoleto {
     public Boleto crear(ComandoBoleto comandoVoleto) {
         Cliente cliente = repositorioBoleto.obtenerPorId(comandoVoleto.getClienteId());
         return new Boleto(
-                comandoVoleto.getId(),
-                comandoVoleto.getPrecioEntrada(),
                 cliente
         );
     }

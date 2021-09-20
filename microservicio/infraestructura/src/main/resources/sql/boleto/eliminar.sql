@@ -1,3 +1,3 @@
 delete
-from voleto
+from boleto
 where id = :id

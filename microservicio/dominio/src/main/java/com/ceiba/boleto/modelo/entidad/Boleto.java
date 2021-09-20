@@ -4,6 +4,7 @@ package com.ceiba.boleto.modelo.entidad;
 import com.ceiba.boleto.constante.TipoGenero;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.boleto.constante.DiaFinDeSemana;
+import com.ceiba.dominio.ValidadorArgumento;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class Boleto {
+
+    private static final String SE_DEBE_INGRESAR_EL_ID_CLIENTE = "Se debe ingresar el id del cliente";
 
     private Long id;
     private double precioEntrada;
@@ -25,11 +28,11 @@ public class Boleto {
 
 
 
-    public Boleto(Long id, double precioEntrada, Cliente cliente) {
-        this.id = id;
-        this.precioEntrada = precioEntrada;
-        this.fechaIngreso = LocalDate.now();
+    public Boleto(Cliente cliente) {
+        ValidadorArgumento.validarObligatorio(cliente,SE_DEBE_INGRESAR_EL_ID_CLIENTE);
+
         this.cliente = cliente;
+        this.fechaIngreso = LocalDate.now();
     }
 
     public void calcularPrecioEntrada() {

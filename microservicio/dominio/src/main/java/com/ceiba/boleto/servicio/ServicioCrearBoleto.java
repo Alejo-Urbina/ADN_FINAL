@@ -3,6 +3,8 @@ package com.ceiba.boleto.servicio;
 import com.ceiba.boleto.modelo.entidad.Boleto;
 import com.ceiba.boleto.puerto.repositorio.RepositorioBoleto;
 
+import java.util.Date;
+
 public class ServicioCrearBoleto {
 
     private final RepositorioBoleto repositorioBoleto;
